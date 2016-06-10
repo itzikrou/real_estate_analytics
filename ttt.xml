@@ -1,0 +1,2250 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<link href="links/bundled.min.css?c=159C1A4AA35ABDF6F338C2C034A41BD5" rel="stylesheet" type="text/css">
+
+</head>
+<body class="unknown unknown0 treb map-enabled">
+
+    <form name="form1" method="post" action="./Link.aspx?Key=0c00bf31977a4a76a78484c9a6cbed52&amp;App=TREB" id="form1">
+
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="joRKVjcy8qPqUNP0wj3eidC5EORHlLKCxuNMY+/lonHb+pN2/u1CbJKElCIBibmNLz1yQuNE7SLxALicxmEOl3GIOl/DYm4ExW5UpTaYxbU="><input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="66E59333"><div>
+
+       
+
+		<div class="header">
+
+	  <div class="fixed-width-header" style="font-size:80%;font-family:Arial;margin:0 auto;">
+<div style="text-align:center; font-weight: bold;">Prepared by: ROBERT GRIN, Salesperson<br>UPPERSIDE REAL ESTATE, BROKERAGE<div style="font-weight: normal;">
+<span style="padding-right: 30px">3F - 64 Jardin Drive, Vaughan, ON L4K3P3</span>905-597-9333</div>
+</div>
+<div style="clear:both;"></div>
+<div style="text-align:right; margin-right: 3px; font-size: 90%;">Printed on 06/09/2016 11:42:18 PM</div>
+</div>
+
+	  </div>
+
+	  
+
+	  <div class="links-container" style="min-height:25px">
+
+      
+
+	  <div class="actions-container" style="WHITE-SPACE: nowrap">
+<span class="unit-information" style="padding-right:2px;"> <label class="label">Units:</label></span><select id="units" onchange="handleSwitchDisplayUnits(this);"><option selected value="metres">Metres</option>
+<option value="feet">Feet</option></select><span class="label" style="PADDING-RIGHT: 10px">Actions:</span><div><a class="print" onclick="handlePrintClick('');return false;">Print</a></div>
+</div>
+
+	  </div>
+
+	  <div class="report-container">
+
+	  <div id="map-container"><div id="map"></div></div>
+
+	  <div class="count-container">2 Results</div>
+
+	  <table class="data-list" border="0" cellpadding="0" cellspacing="0">
+<thead><tr>
+<th class="data-list-row-number-header">#</th>
+<th class="sortable text" data-metadata='{"width":"24", "cluster": "", "align": "0", "name": "addr"}'><span>Address</span></th>
+<th class="sortable text" data-metadata='{"width":"7", "cluster": "", "align": "0", "name": "apt_num"}'><span>Apt/Unit</span></th>
+<th class="sortable text" data-metadata='{"width":"14", "cluster": "", "align": "0", "name": "municipality"}'><span>Municipality</span></th>
+<th class="sortable text" data-metadata='{"width":"16", "cluster": "", "align": "3", "name": "lp_dol"}'><span>Price</span></th>
+<th class="sortable text" data-metadata='{"width":"2", "cluster": "", "align": "2", "name": "br"}'><span>Beds</span></th>
+<th class="sortable text" data-metadata='{"width":"2", "cluster": "", "align": "2", "name": "bath_tot"}'><span>Wr</span></th>
+<th class="sortable text" data-metadata='{"width":"3", "cluster": "", "align": "0", "name": "lsc"}'><span>LSC</span></th>
+<th class="sortable text" data-metadata='{"width":"8", "cluster": "", "align": "2", "name": "ml_num"}'><span>MLS#</span></th>
+</tr></thead>
+<tbody>
+<tr class="even" data-map-class="status-New" data-ln="-79.66434" data-lt="44.40763" data-identifier="X3495657" data-pop-up='{"Photo":"","lp_dol":"428000.00","lp_code":"","ml_num":"X3495657","type_own1_out":"Detached","tot_area":"","tot_areacd":"","lsc":"New","addr":"10 Glenecho  Dr","apt_num":"","municipality":"Barrie","zip":"L4M4J3","PropertyDetail":"","ListNum":"","latitude":"44.40763","longitude":"-79.66434","class":"Free","br":"3","bath_tot":"4","province":"","style":"Bungalow-Raised"}'>
+<td class="data-list-row-number">1</td>
+<td class="align-center">10 Glenecho  Dr</td>
+<td class="align-center">&nbsp;</td>
+<td class="align-center">Barrie</td>
+<td class="align-left">$428,000.00</td>
+<td class="align-left">3</td>
+<td class="align-left">4</td>
+<td class="align-center">New</td>
+<td class="align-left">X3495657</td>
+</tr>
+<tr class="odd" data-map-class="status-New" data-ln="-79.69273" data-lt="44.41715" data-identifier="X3514785" data-pop-up='{"Photo":"","lp_dol":"489000.00","lp_code":"","ml_num":"X3514785","type_own1_out":"Detached","tot_area":"","tot_areacd":"","lsc":"New","addr":"62 Stollar Blvd","apt_num":"","municipality":"Barrie","zip":"L4M6N3","PropertyDetail":"","ListNum":"","latitude":"44.41715","longitude":"-79.69273","class":"Free","br":"3","bath_tot":"3","province":"","style":"2-Storey"}'>
+<td class="data-list-row-number">2</td>
+<td class="align-center">62 Stollar Blvd</td>
+<td class="align-center">&nbsp;</td>
+<td class="align-center">Barrie</td>
+<td class="align-left">$489,000.00</td>
+<td class="align-left">3</td>
+<td class="align-left">3</td>
+<td class="align-center">New</td>
+<td class="align-left">X3514785</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+	  
+
+		<div class="footer">
+
+	  Toronto Real Estate Board (TREB) assumes no responsibility for the accuracy of any information shown. Copyright TREB 2016.
+
+	  </div>
+
+	  
+
+
+
+	 <div class="reports view-clf">
+
+		
+
+				<div class="link-item status-new hasheader" data-identifier="X3495657" id="X3495657" data-deferred-loaded="http://v3.torontomls.net/Live/Pages/Public/Link.aspx?Key=0c00bf31977a4a76a78484c9a6cbed52&amp;App=TREB&amp;linkItem=536475371&amp;hint=A&amp;t=">
+
+                    <div class="header loaded"><div class="fixed-width-header" style="font-size:80%;font-family:Arial;margin:0 auto;">
+<div style="text-align:center; font-weight: bold;">Prepared by: ROBERT GRIN, Salesperson<br>UPPERSIDE REAL ESTATE, BROKERAGE<div style="font-weight: normal;">
+<span style="padding-right: 30px">3F - 64 Jardin Drive, Vaughan, ON L4K3P3</span>905-597-9333</div>
+</div>
+<div style="clear:both;"></div>
+<div style="text-align:right; margin-right: 3px; font-size: 90%;">Printed on 06/09/2016 11:42:18 PM</div>
+</div></div>
+
+                    <span class="map-marker-icon"><span class="map-marker-index">1</span></span>
+
+					<div class="report-container">
+<div class="links-container">
+<span class="label">Links:</span><div class="actions-container" style="WHITE-SPACE: nowrap">
+<span class="label" style="PADDING-RIGHT: 10px">Actions:</span><div><a class="print" onclick="handlePrintClick('X3495657');return false;">Print</a></div>
+</div>
+</div>
+<div class="report-container status-new">
+
+<div class="formitem form viewform">
+
+	<div class="formitem legacyBorder formgroup vertical" style="width:750px">
+
+		<div class="formitem formgroup tabular">
+
+			<div class="formitem formgroup horizontal">
+
+				<div class="formitem formgroup vertical" style="width:250px">
+
+					<div class="formitem formgroup vertical" style="width:250px">
+
+						<div class="imageset_container ">
+<span></span><img src="http://photos.v3.torontomls.net/Live/photos/FULL/1/657/X3495657.jpg?20160515212821" onerror="this.className += ' imgerror'; this.parentNode.className += ' hasimgerror';" class="formitem imageset multi-photo" data-multi-photos='{"multi-photos":[{"url":"http://photos.v3.torontomls.net/Live/photos/FULL/1/657/X3495657.jpg?20160515212821","description":"front"},{"url":"http://photos.v3.torontomls.net/Live/photos/FULL/2/657/X3495657_2.jpg?20160515212821","description":"back house"},{"url":"http://photos.v3.torontomls.net/Live/photos/FULL/3/657/X3495657_3.jpg?20160515212821","description":"yard"},{"url":"http://photos.v3.torontomls.net/Live/photos/FULL/4/657/X3495657_4.jpg?20160515212821","description":"yard"},{"url":"http://photos.v3.torontomls.net/Live/photos/FULL/5/657/X3495657_5.jpg?20160515212821","description":"back"},{"url":"http://photos.v3.torontomls.net/Live/photos/FULL/6/657/X3495657_6.jpg?20160515212821","description":"foyer"},{"url":"http://photos.v3.torontomls.net/Live/photos/FULL/7/657/X3495657_7.jpg?20160515212821","description":"living room"},{"url":"http://photos.v3.torontomls.net/Live/photos/FULL/8/657/X3495657_8.jpg?20160515212821","description":"kitchen main floor"},{"url":"http://photos.v3.torontomls.net/Live/photos/FULL/9/657/X3495657_9.jpg?20160515212821","description":"bathroom"}]}' alt="image">
+</div>
+
+					</div>
+
+				</div>
+
+				<div class="formitem formgroup vertical" style="width:500px">
+
+					<div class="formitem formgroup horizontal">
+
+						<div class="formitem formgroup horizontal">
+
+							<div class="formitem formgroup vertical" style="width:325px">
+
+								<div class="formitem formgroup horizontal">
+
+									<div class="formitem formgroup vertical" style="width:325px;">
+
+										<div class="formitem formgroup horizontal">
+
+											<span class="formitem formfield"><span class="value" style="font-weight:bold">10 Glenecho  Dr</span></span>
+
+											<span class="formitem formfield"><span class="value" style="font-weight:bold"></span></span>
+
+										</div>
+
+									</div>
+
+								</div>
+
+								<div class="formitem formgroup horizontal">
+
+									<span class="formitem formfield"><span class="value" style="font-weight:bold">Barrie</span></span><span class="formliteral formitem"> </span>
+
+									<span class="formitem formfield"><span class="value" style="font-weight:bold">Ontario</span></span><span class="formliteral formitem"> </span>
+
+									<span class="formitem formfield"><span class="value" style="font-weight:bold">L4M4J3</span></span>
+
+								</div>
+
+							</div>
+
+							<div class="formitem formgroup vertical" style="width:150px;">
+
+								<div class="formitem formgroup horizontal">
+
+									<span class="formitem formfield"><label>List:</label><span class="value" style="font-weight:bold">$428,000</span></span>
+
+									<span class="formitem formfield"><label>For:</label><span class="value" style="font-weight:bold">Sale</span></span>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<span class="formitem formfield"><span class="value">Barrie</span></span><span class="formliteral formitem"> </span>
+
+						<span class="formitem formfield"><span class="value">Grove East</span></span><span class="formliteral formitem"> </span>
+
+						<span class="formitem formfield"><span class="value">Simcoe</span></span>
+
+						<span class="formitem formfield"><span class="value">502-12-F</span></span>
+
+					</div>
+
+					<div class="formitem formgroup horizontal">
+
+						<div class="formitem formgroup vertical" style="width:20%">
+
+							<span class="formitem formfield"><label>SPIS:</label><span class="value">N</span></span>
+
+						</div>
+
+						<div class="formitem formgroup vertical" style="width:55%">
+
+							<div class="formitem formgroup horizontal">
+
+								<span class="formitem formfield"><label>Taxes:</label><span class="value">$3,157.00</span></span><span class="formliteral formitem">&nbsp;/</span>
+
+								<span class="formitem formfield"><span class="value">2015</span></span>
+
+							</div>
+
+						</div>
+
+						<div class="formitem formgroup vertical" style="width:25%">
+
+							<span class="formitem formfield"><label>DOM:</label><span class="value" style="font-weight:bold">27</span></span>
+
+						</div>
+
+					</div>
+<hr>
+<div class="formitem formgroup horizontal" style="width:490px">
+
+						<div class="formitem formgroup horizontal" style="width:60%;">
+
+							<div class="formitem formgroup vertical" style="width:65%">
+
+								<span class="formitem formfield"><span class="value">Detached</span></span>
+
+								<span class="formitem formfield"><span class="value">Bungalow-Raised</span></span>
+
+							</div>
+
+							<div class="formitem formgroup vertical" style="width:35%">
+
+								<span class="formitem formfield"><label>Front On:</label><span class="value">W</span></span>
+
+								<span class="formitem formfield"><label>Acre:</label><span class="value"></span></span>
+
+							</div>
+
+						</div>
+
+						<div class="formitem formgroup vertical" style="width:40%">
+
+							<span class="formitem formfield"><label>Rms:</label><span class="value">6 + 5</span></span>
+
+							<span class="formitem formfield"><label>Bedrooms:</label><span class="value">3 + 3</span></span>
+
+							<span class="formitem formfield"><label>Washrooms:</label><span class="value">4</span></span>
+
+							<span class="formitem formfield"><span class="value">2x3xBsmt, 1x3xGround, 1x4xGround</span></span>
+
+						</div>
+
+						<div class="formitem formgroup horizontal">
+
+							<span class="formitem formfield"><label>Lot:</label><span class="value">50 x 110 Feet</span></span>
+
+							<span class="formitem formfield"><label>Irreg:</label><span class="value"></span></span>
+
+						</div>
+
+					</div>
+
+					<span class="formitem formfield"><label>Dir/Cross St:</label><span class="value">Grove St E And Nelson Street</span></span>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="formitem formgroup horizontal">
+
+			<div class="formitem formgroup vertical" style="width:20%">
+
+				<span class="formitem formfield"><label>MLS#:</label><span class="value">X3495657</span></span>
+
+			</div>
+
+			<div class="formitem formgroup vertical" style="width:35%">
+
+				<span class="formitem formfield"><label>Contract Date:</label><span class="value">5/13/2016</span></span>
+
+			</div>
+
+			<div class="formitem formgroup vertical" style="width:30%">
+
+				<span class="formitem formfield"><label>Possession:</label><span class="value">Imm</span></span>
+
+			</div>
+
+			<div class="formitem formgroup vertical" style="width:15%">
+
+				<span class="formitem formfield"><label>PIN#:</label><span class="value">588330058</span></span>
+
+			</div>
+
+		</div>
+
+		<div class="formitem formgroup tabular">
+
+			<div class="formitem formgroup horizontal">
+
+				<div class="formitem formgroup vertical" style="width:262px;">
+
+					<span class="formitem formfield"><label>Kitchens:</label><span class="value">2 + 2</span></span>
+
+					<span class="formitem formfield"><label>Fam Rm:</label><span class="value">N</span></span>
+
+					<span class="formitem formfield"><label>Basement:</label><span class="value">Finished</span></span>
+
+					<span class="formitem formfield"><label>Fireplace/Stv:</label><span class="value">N</span></span>
+
+					<div class="formitem formgroup horizontal">
+
+						<span class="formitem formfield"><label>Heat:</label><span class="value">Forced Air / Gas</span></span>
+
+					</div>
+
+					<span class="formitem formfield"><label>A/C:</label><span class="value">None</span></span>
+
+					<span class="formitem formfield"><label>Central Vac:</label><span class="value"></span></span>
+
+					<span class="formitem formfield"><label>Apx Age:</label><span class="value">16-30</span></span>
+
+					<span class="formitem formfield"><label>Apx Sqft:</label><span class="value">1100-1500</span></span>
+
+					<div class="formitem formgroup horizontal">
+
+						<span class="formitem formfield"><label>Assessment:</label><span class="value"></span></span>
+
+					</div>
+
+					<span class="formitem formfield"><label>Addl Mo Fee:</label><span class="value"></span></span>
+
+					<span class="formitem formfield"><label>Elevator/Lift:</label><span class="value"></span></span>
+
+					<span class="formitem formfield"><label>Laundry Lev:</label><span class="value"></span></span>
+
+					<span class="formitem formfield"><label style="width:120px;">Phys Hdcap-Eqp:</label><span class="value"></span></span>
+
+				</div>
+
+				<div class="formitem formgroup vertical" style="width:232px;">
+
+					<div class="formitem formgroup vertical">
+
+						<span class="formitem formfield"><label>Exterior:</label><span class="value">Alum Siding / Brick</span></span>
+
+						<span class="formitem formfield"><label>Drive:</label><span class="value">Private</span></span>
+
+						<span class="formitem formfield"><label>Garage:</label><span class="value">Attached / 1.0</span></span>
+
+						<span class="formitem formfield"><label>Park Spaces:</label><span class="value">2</span></span>
+
+						<span class="formitem formfield"><label>UFFI:</label><span class="value"></span></span>
+
+						<span class="formitem formfield"><label>Pool:</label><span class="value">None</span></span>
+
+						<span class="formitem formfield"><label>Energy Cert:</label><span class="value"></span></span>
+
+						<span class="formitem formfield"><label>Cert Level:</label><span class="value"></span></span>
+
+						<span class="formitem formfield"><label>GreenPIS:</label><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup horizontal">
+
+						<span class="formitem formfield"><label>Prop Feat:</label><span class="value">Park, Public Transit, School</span></span>
+
+					</div>
+
+				</div>
+
+				<div class="formitem formgroup vertical" style="width:255px;">
+
+					<span class="formitem formfield"><label>Zoning:</label><span class="value">R2</span></span>
+
+					<span class="formitem formfield"><label>Cable TV:</label><span class="value"></span></span>
+
+					<span class="formitem formfield"><label>Hydro:</label><span class="value"></span></span>
+
+					<span class="formitem formfield"><label>Gas:</label><span class="value"></span></span>
+
+					<span class="formitem formfield"><label>Phone:</label><span class="value"></span></span>
+
+					<span class="formitem formfield"><label>Water:</label><span class="value">Municipal</span></span>
+
+					<span class="formitem formfield"><label>Water Supply:</label><span class="value"></span></span>
+
+					<span class="formitem formfield"><label>Sewer:</label><span class="value">Sewers</span></span>
+
+					<span class="formitem formfield"><label>Spec Desig:</label><span class="value">Unknown</span></span>
+
+					<span class="formitem formfield"><label>Farm/Agr:</label><span class="value"></span></span>
+
+					<span class="formitem formfield"><label>Waterfront:</label><span class="value"></span></span>
+
+					<span class="formitem formfield"><label>Retirement:</label><span class="value"></span></span>
+
+					<div class="formitem formgroup horizontal">
+
+						<span class="formitem formfield"><label>Oth Struct:</label><span class="value"></span></span>
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="formitem formgroup horizontal">
+
+			<div class="formitem formgroup vertical" style="width:1%">
+<span class="formliteral formitem"> </span>
+
+			</div>
+
+			<div class="formitem formgroup vertical" style="width:3%">
+<b><u>#</u></b>
+
+			</div>
+
+			<div class="formitem formgroup vertical" style="width:11%">
+<b><u>Room</u></b>
+
+			</div>
+
+			<div class="formitem formgroup vertical" style="width:11%">
+<b><u>Level</u></b>
+
+			</div>
+
+			<div class="formitem formgroup vertical" style="width:10%; text-decoration: underline;font-weight: bold;">
+
+				<span class="formitem formfield"><span class="value"></span></span>
+
+			</div>
+
+			<div class="formitem formgroup vertical" style="width:2%">
+<span class="formliteral formitem"> </span>
+
+			</div>
+
+			<div class="formitem formgroup vertical" style="width:12%; text-decoration: underline;font-weight: bold;">
+
+				<span class="formitem formfield"><span class="value"></span></span>
+
+			</div>
+
+			<div class="formitem formgroup vertical" style="width:47%">
+<b><u>Description</u></b>
+
+			</div>
+
+		</div>
+
+		<div class="formitem formgroup vertical">
+
+			<div class="formitem formgroup vertical">
+
+				<div class="formitem formgroup horizontal">
+
+					<div class="formitem formgroup vertical" style="width:1%">
+<span class="formliteral formitem"> </span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:3%;">
+
+						<span class="formitem formfield"><span class="value">1</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Kitchen</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Main</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:10%;">
+
+						<span class="formitem formfield"><span class="value">3.05</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:2%;min-height:2px;">
+
+						<div class="formitem formgroup vertical">
+<span class="formliteral formitem">x</span>
+
+						</div>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:12%;">
+
+						<span class="formitem formfield"><span class="value">3.78</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value">Eat-In Kitchen</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:18%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="formitem formgroup vertical">
+
+				<div class="formitem formgroup horizontal">
+
+					<div class="formitem formgroup vertical" style="width:1%">
+<span class="formliteral formitem"> </span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:3%;">
+
+						<span class="formitem formfield"><span class="value">2</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Living</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Main</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:10%;">
+
+						<span class="formitem formfield"><span class="value">3.76</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:2%;min-height:2px;">
+
+						<div class="formitem formgroup vertical">
+<span class="formliteral formitem">x</span>
+
+						</div>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:12%;">
+
+						<span class="formitem formfield"><span class="value">5.74</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:18%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="formitem formgroup vertical">
+
+				<div class="formitem formgroup horizontal">
+
+					<div class="formitem formgroup vertical" style="width:1%">
+<span class="formliteral formitem"> </span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:3%;">
+
+						<span class="formitem formfield"><span class="value">3</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Dining</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Main</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:10%;">
+
+						<span class="formitem formfield"><span class="value">3.17</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:2%;min-height:2px;">
+
+						<div class="formitem formgroup vertical">
+<span class="formliteral formitem">x</span>
+
+						</div>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:12%;">
+
+						<span class="formitem formfield"><span class="value">2.92</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:18%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="formitem formgroup vertical">
+
+				<div class="formitem formgroup horizontal">
+
+					<div class="formitem formgroup vertical" style="width:1%">
+<span class="formliteral formitem"> </span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:3%;">
+
+						<span class="formitem formfield"><span class="value">4</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Foyer</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Main</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:10%;">
+
+						<span class="formitem formfield"><span class="value">2.01</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:2%;min-height:2px;">
+
+						<div class="formitem formgroup vertical">
+<span class="formliteral formitem">x</span>
+
+						</div>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:12%;">
+
+						<span class="formitem formfield"><span class="value">5.28</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:18%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="formitem formgroup vertical">
+
+				<div class="formitem formgroup horizontal">
+
+					<div class="formitem formgroup vertical" style="width:1%">
+<span class="formliteral formitem"> </span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:3%;">
+
+						<span class="formitem formfield"><span class="value">5</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Master</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Main</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:10%;">
+
+						<span class="formitem formfield"><span class="value">3.00</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:2%;min-height:2px;">
+
+						<div class="formitem formgroup vertical">
+<span class="formliteral formitem">x</span>
+
+						</div>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:12%;">
+
+						<span class="formitem formfield"><span class="value">3.94</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value">3 Pc Ensuite</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:18%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="formitem formgroup vertical">
+
+				<div class="formitem formgroup horizontal">
+
+					<div class="formitem formgroup vertical" style="width:1%">
+<span class="formliteral formitem"> </span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:3%;">
+
+						<span class="formitem formfield"><span class="value">6</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">2nd Br</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Main</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:10%;">
+
+						<span class="formitem formfield"><span class="value">2.69</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:2%;min-height:2px;">
+
+						<div class="formitem formgroup vertical">
+<span class="formliteral formitem">x</span>
+
+						</div>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:12%;">
+
+						<span class="formitem formfield"><span class="value">3.86</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:18%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="formitem formgroup vertical">
+
+				<div class="formitem formgroup horizontal">
+
+					<div class="formitem formgroup vertical" style="width:1%">
+<span class="formliteral formitem"> </span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:3%;">
+
+						<span class="formitem formfield"><span class="value">7</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">3rd Br</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Main</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:10%;">
+
+						<span class="formitem formfield"><span class="value">2.69</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:2%;min-height:2px;">
+
+						<div class="formitem formgroup vertical">
+<span class="formliteral formitem">x</span>
+
+						</div>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:12%;">
+
+						<span class="formitem formfield"><span class="value">3.73</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:18%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="formitem formgroup vertical">
+
+				<div class="formitem formgroup horizontal">
+
+					<div class="formitem formgroup vertical" style="width:1%">
+<span class="formliteral formitem"> </span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:3%;">
+
+						<span class="formitem formfield"><span class="value">8</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Kitchen</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Bsmt</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:10%;">
+
+						<span class="formitem formfield"><span class="value">5.30</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:2%;min-height:2px;">
+
+						<div class="formitem formgroup vertical">
+<span class="formliteral formitem">x</span>
+
+						</div>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:12%;">
+
+						<span class="formitem formfield"><span class="value">3.70</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:18%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="formitem formgroup vertical">
+
+				<div class="formitem formgroup horizontal">
+
+					<div class="formitem formgroup vertical" style="width:1%">
+<span class="formliteral formitem"> </span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:3%;">
+
+						<span class="formitem formfield"><span class="value">9</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Office</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Bsmt</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:10%;">
+
+						<span class="formitem formfield"><span class="value">3.30</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:2%;min-height:2px;">
+
+						<div class="formitem formgroup vertical">
+<span class="formliteral formitem">x</span>
+
+						</div>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:12%;">
+
+						<span class="formitem formfield"><span class="value">2.70</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:18%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="formitem formgroup vertical">
+
+				<div class="formitem formgroup horizontal">
+
+					<div class="formitem formgroup vertical" style="width:1%">
+<span class="formliteral formitem"> </span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:3%;">
+
+						<span class="formitem formfield"><span class="value">10</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">4th Br</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Bsmt</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:10%;">
+
+						<span class="formitem formfield"><span class="value">3.00</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:2%;min-height:2px;">
+
+						<div class="formitem formgroup vertical">
+<span class="formliteral formitem">x</span>
+
+						</div>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:12%;">
+
+						<span class="formitem formfield"><span class="value">3.80</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:18%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="formitem formgroup vertical">
+
+				<div class="formitem formgroup horizontal">
+
+					<div class="formitem formgroup vertical" style="width:1%">
+<span class="formliteral formitem"> </span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:3%;">
+
+						<span class="formitem formfield"><span class="value">11</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">5th Br</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Bsmt</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:10%;">
+
+						<span class="formitem formfield"><span class="value">3.30</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:2%;min-height:2px;">
+
+						<div class="formitem formgroup vertical">
+<span class="formliteral formitem">x</span>
+
+						</div>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:12%;">
+
+						<span class="formitem formfield"><span class="value">3.40</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:18%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="formitem formgroup vertical">
+
+				<div class="formitem formgroup horizontal">
+
+					<div class="formitem formgroup vertical" style="width:1%">
+<span class="formliteral formitem"> </span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:3%;">
+
+						<span class="formitem formfield"><span class="value">12</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Br</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Bsmt</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:10%;">
+
+						<span class="formitem formfield"><span class="value">3.40</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:2%;min-height:2px;">
+
+						<div class="formitem formgroup vertical">
+<span class="formliteral formitem">x</span>
+
+						</div>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:12%;">
+
+						<span class="formitem formfield"><span class="value">3.10</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:18%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="formitem formgroup vertical" style="width:750px;border-bottom: thin solid #000000;">
+
+		</div>
+
+		<div class="formitem formgroup vertical">
+
+			<span class="formitem formfield"><label style="text-align:left;display:inline;;">Client Remks:</label><span class="value" style="display:inline;">Great Investment Opportunity.Legal Student Rental. 3+3 Bungalow Raised. Prime Location Close To Georgian Collage And Hospital. Great For The Extended Family With Thousands Spent On W/Up Basement .Unistone Driveway. Foyer, Kitchen &amp; Bath Have Marble Floors. No Carpets. Potlights. Landscaped Backyard.</span></span>
+
+			<span class="formitem formfield"><label style="text-align:left;;display:inline;;">Extras:</label><span class="value" style="display:inline;">Washer Dryer, Fridge, Stove</span></span><hr>
+</div>
+
+		<div class="formitem formgroup vertical">
+
+			<div class="formitem formgroup horizontal">
+
+				<span class="formitem formfield"><label>Listing Contracted With:</label><a href="Javascript:showOfficePopup('097401');" class="formlink value">SUTTON GROUP INCENTIVE REALTY INC., BROKERAGE</a></span>
+
+				<span class="formitem formfield"><label>Ph:</label><span class="value">705-739-1300</span></span>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+<hr class="clearfix">
+<div class="footer">Toronto Real Estate Board (TREB) assumes no responsibility for the accuracy of any information shown. Copyright TREB 2016.</div>
+</div>
+</div>
+
+				</div>
+
+			
+
+				<div class="link-item status-new hasheader" data-identifier="X3514785" id="X3514785" data-deferred-loaded="http://v3.torontomls.net/Live/Pages/Public/Link.aspx?Key=0c00bf31977a4a76a78484c9a6cbed52&amp;App=TREB&amp;linkItem=536475372&amp;hint=A&amp;t=">
+
+                    <div class="header loaded"><div class="fixed-width-header" style="font-size:80%;font-family:Arial;margin:0 auto;">
+<div style="text-align:center; font-weight: bold;">Prepared by: ROBERT GRIN, Salesperson<br>UPPERSIDE REAL ESTATE, BROKERAGE<div style="font-weight: normal;">
+<span style="padding-right: 30px">3F - 64 Jardin Drive, Vaughan, ON L4K3P3</span>905-597-9333</div>
+</div>
+<div style="clear:both;"></div>
+<div style="text-align:right; margin-right: 3px; font-size: 90%;">Printed on 06/09/2016 11:42:18 PM</div>
+</div></div>
+
+                    <span class="map-marker-icon"><span class="map-marker-index">2</span></span>
+
+					<div class="report-container">
+<div class="links-container">
+<span class="label">Links:</span><div class="actions-container" style="WHITE-SPACE: nowrap">
+<span class="label" style="PADDING-RIGHT: 10px">Actions:</span><div><a class="print" onclick="handlePrintClick('X3514785');return false;">Print</a></div>
+</div>
+</div>
+<div class="report-container status-new">
+
+<div class="formitem form viewform">
+
+	<div class="formitem legacyBorder formgroup vertical" style="width:750px">
+
+		<div class="formitem formgroup tabular">
+
+			<div class="formitem formgroup horizontal">
+
+				<div class="formitem formgroup vertical" style="width:250px">
+
+					<div class="formitem formgroup vertical" style="width:250px">
+
+						<div class="imageset_container ">
+<span></span><img src="http://photos.v3.torontomls.net/Live/photos/FULL/1/785/X3514785.jpg?20160603153230" onerror="this.className += ' imgerror'; this.parentNode.className += ' hasimgerror';" class="formitem imageset multi-photo" data-multi-photos='{"multi-photos":[{"url":"http://photos.v3.torontomls.net/Live/photos/FULL/1/785/X3514785.jpg?20160603153230","description":""},{"url":"http://photos.v3.torontomls.net/Live/photos/FULL/2/785/X3514785_2.jpg?20160603153230","description":""},{"url":"http://photos.v3.torontomls.net/Live/photos/FULL/3/785/X3514785_3.jpg?20160603153230","description":""},{"url":"http://photos.v3.torontomls.net/Live/photos/FULL/4/785/X3514785_4.jpg?20160603153230","description":"View from Kitchen"},{"url":"http://photos.v3.torontomls.net/Live/photos/FULL/5/785/X3514785_5.jpg?20160603153230","description":"View from Kitchen"},{"url":"http://photos.v3.torontomls.net/Live/photos/FULL/6/785/X3514785_6.jpg?20160603153230","description":"View from Kitchen"},{"url":"http://photos.v3.torontomls.net/Live/photos/FULL/7/785/X3514785_7.jpg?20160603153230","description":""},{"url":"http://photos.v3.torontomls.net/Live/photos/FULL/8/785/X3514785_8.jpg?20160603153230","description":"View from BR #3"},{"url":"http://photos.v3.torontomls.net/Live/photos/FULL/9/785/X3514785_9.jpg?20160603153230","description":""},{"url":"http://photos.v3.torontomls.net/Live/photos/FULL/10/785/X3514785_10.jpg?20160603153230","description":"View from BR #2"},{"url":"http://photos.v3.torontomls.net/Live/photos/FULL/11/785/X3514785_11.jpg?20160603153230","description":"View from BR #2"},{"url":"http://photos.v3.torontomls.net/Live/photos/FULL/12/785/X3514785_12.jpg?20160603153230","description":"Master Bedroom"},{"url":"http://photos.v3.torontomls.net/Live/photos/FULL/13/785/X3514785_13.jpg?20160603153230","description":"View from Master BR"},{"url":"http://photos.v3.torontomls.net/Live/photos/FULL/14/785/X3514785_14.jpg?20160603153230","description":"View from Master BR"},{"url":"http://photos.v3.torontomls.net/Live/photos/FULL/15/785/X3514785_15.jpg?20160603153230","description":"View From Living Room"},{"url":"http://photos.v3.torontomls.net/Live/photos/FULL/16/785/X3514785_16.jpg?20160603153230","description":"View from Master BR"}]}' alt="image">
+</div>
+
+					</div>
+
+				</div>
+
+				<div class="formitem formgroup vertical" style="width:500px">
+
+					<div class="formitem formgroup horizontal">
+
+						<div class="formitem formgroup horizontal">
+
+							<div class="formitem formgroup vertical" style="width:325px">
+
+								<div class="formitem formgroup horizontal">
+
+									<div class="formitem formgroup vertical" style="width:325px;">
+
+										<div class="formitem formgroup horizontal">
+
+											<span class="formitem formfield"><span class="value" style="font-weight:bold">62 Stollar Blvd</span></span>
+
+											<span class="formitem formfield"><span class="value" style="font-weight:bold"></span></span>
+
+										</div>
+
+									</div>
+
+								</div>
+
+								<div class="formitem formgroup horizontal">
+
+									<span class="formitem formfield"><span class="value" style="font-weight:bold">Barrie</span></span><span class="formliteral formitem"> </span>
+
+									<span class="formitem formfield"><span class="value" style="font-weight:bold">Ontario</span></span><span class="formliteral formitem"> </span>
+
+									<span class="formitem formfield"><span class="value" style="font-weight:bold">L4M6N3</span></span>
+
+								</div>
+
+							</div>
+
+							<div class="formitem formgroup vertical" style="width:150px;">
+
+								<div class="formitem formgroup horizontal">
+
+									<span class="formitem formfield"><label>List:</label><span class="value" style="font-weight:bold">$489,000</span></span>
+
+									<span class="formitem formfield"><label>For:</label><span class="value" style="font-weight:bold">Sale</span></span>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<span class="formitem formfield"><span class="value">Barrie</span></span><span class="formliteral formitem"> </span>
+
+						<span class="formitem formfield"><span class="value">Little Lake</span></span><span class="formliteral formitem"> </span>
+
+						<span class="formitem formfield"><span class="value">Simcoe</span></span>
+
+						<span class="formitem formfield"><span class="value">502-10-E</span></span>
+
+					</div>
+
+					<div class="formitem formgroup horizontal">
+
+						<div class="formitem formgroup vertical" style="width:20%">
+
+							<span class="formitem formfield"><label>SPIS:</label><span class="value">N</span></span>
+
+						</div>
+
+						<div class="formitem formgroup vertical" style="width:55%">
+
+							<div class="formitem formgroup horizontal">
+
+								<span class="formitem formfield"><label>Taxes:</label><span class="value">$3,624.59</span></span><span class="formliteral formitem">&nbsp;/</span>
+
+								<span class="formitem formfield"><span class="value">2015</span></span>
+
+							</div>
+
+						</div>
+
+						<div class="formitem formgroup vertical" style="width:25%">
+
+							<span class="formitem formfield"><label>DOM:</label><span class="value" style="font-weight:bold">6</span></span>
+
+						</div>
+
+					</div>
+<hr>
+<div class="formitem formgroup horizontal" style="width:490px">
+
+						<div class="formitem formgroup horizontal" style="width:60%;">
+
+							<div class="formitem formgroup vertical" style="width:65%">
+
+								<span class="formitem formfield"><span class="value">Detached</span></span>
+
+								<span class="formitem formfield"><span class="value">2-Storey</span></span>
+
+							</div>
+
+							<div class="formitem formgroup vertical" style="width:35%">
+
+								<span class="formitem formfield"><label>Front On:</label><span class="value">E</span></span>
+
+								<span class="formitem formfield"><label>Acre:</label><span class="value"></span></span>
+
+							</div>
+
+						</div>
+
+						<div class="formitem formgroup vertical" style="width:40%">
+
+							<span class="formitem formfield"><label>Rms:</label><span class="value">5 + 2</span></span>
+
+							<span class="formitem formfield"><label>Bedrooms:</label><span class="value">3 + 1</span></span>
+
+							<span class="formitem formfield"><label>Washrooms:</label><span class="value">3</span></span>
+
+							<span class="formitem formfield"><span class="value">1x2xMain, 1x4x2nd, 1x3xBsmt</span></span>
+
+						</div>
+
+						<div class="formitem formgroup horizontal">
+
+							<span class="formitem formfield"><label>Lot:</label><span class="value">40 x 115 Feet</span></span>
+
+							<span class="formitem formfield"><label>Irreg:</label><span class="value"></span></span>
+
+						</div>
+
+					</div>
+
+					<span class="formitem formfield"><label>Dir/Cross St:</label><span class="value">Livingstone E / Brown / Stolla</span></span>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="formitem formgroup horizontal">
+
+			<div class="formitem formgroup vertical" style="width:20%">
+
+				<span class="formitem formfield"><label>MLS#:</label><span class="value">X3514785</span></span>
+
+			</div>
+
+			<div class="formitem formgroup vertical" style="width:35%">
+
+				<span class="formitem formfield"><label>Contract Date:</label><span class="value">6/03/2016</span></span>
+
+			</div>
+
+			<div class="formitem formgroup vertical" style="width:30%">
+
+				<span class="formitem formfield"><label>Possession:</label><span class="value">Tbd</span></span>
+
+			</div>
+
+			<div class="formitem formgroup vertical" style="width:15%">
+
+				<span class="formitem formfield"><label>PIN#:</label><span class="value"></span></span>
+
+			</div>
+
+		</div>
+
+		<div class="formitem formgroup tabular">
+
+			<div class="formitem formgroup horizontal">
+
+				<div class="formitem formgroup vertical" style="width:262px;">
+
+					<span class="formitem formfield"><label>Kitchens:</label><span class="value">1 + 1</span></span>
+
+					<span class="formitem formfield"><label>Fam Rm:</label><span class="value">N</span></span>
+
+					<span class="formitem formfield"><label>Basement:</label><span class="value">Apartment / W/O</span></span>
+
+					<span class="formitem formfield"><label>Fireplace/Stv:</label><span class="value">N</span></span>
+
+					<div class="formitem formgroup horizontal">
+
+						<span class="formitem formfield"><label>Heat:</label><span class="value">Forced Air / Gas</span></span>
+
+					</div>
+
+					<span class="formitem formfield"><label>A/C:</label><span class="value">Central Air</span></span>
+
+					<span class="formitem formfield"><label>Central Vac:</label><span class="value"></span></span>
+
+					<span class="formitem formfield"><label>Apx Age:</label><span class="value"></span></span>
+
+					<span class="formitem formfield"><label>Apx Sqft:</label><span class="value"></span></span>
+
+					<div class="formitem formgroup horizontal">
+
+						<span class="formitem formfield"><label>Assessment:</label><span class="value"></span></span>
+
+					</div>
+
+					<span class="formitem formfield"><label>Addl Mo Fee:</label><span class="value"></span></span>
+
+					<span class="formitem formfield"><label>Elevator/Lift:</label><span class="value">N</span></span>
+
+					<span class="formitem formfield"><label>Laundry Lev:</label><span class="value">Lower</span></span>
+
+					<span class="formitem formfield"><label style="width:120px;">Phys Hdcap-Eqp:</label><span class="value"></span></span>
+
+				</div>
+
+				<div class="formitem formgroup vertical" style="width:232px;">
+
+					<div class="formitem formgroup vertical">
+
+						<span class="formitem formfield"><label>Exterior:</label><span class="value">Brick</span></span>
+
+						<span class="formitem formfield"><label>Drive:</label><span class="value">Private</span></span>
+
+						<span class="formitem formfield"><label>Garage:</label><span class="value">Attached / 1.0</span></span>
+
+						<span class="formitem formfield"><label>Park Spaces:</label><span class="value">4</span></span>
+
+						<span class="formitem formfield"><label>UFFI:</label><span class="value"></span></span>
+
+						<span class="formitem formfield"><label>Pool:</label><span class="value">None</span></span>
+
+						<span class="formitem formfield"><label>Energy Cert:</label><span class="value"></span></span>
+
+						<span class="formitem formfield"><label>Cert Level:</label><span class="value"></span></span>
+
+						<span class="formitem formfield"><label>GreenPIS:</label><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup horizontal">
+
+						<span class="formitem formfield"><label>Prop Feat:</label><span class="value">Cul De Sac</span></span>
+
+					</div>
+
+				</div>
+
+				<div class="formitem formgroup vertical" style="width:255px;">
+
+					<span class="formitem formfield"><label>Zoning:</label><span class="value"></span></span>
+
+					<span class="formitem formfield"><label>Cable TV:</label><span class="value"></span></span>
+
+					<span class="formitem formfield"><label>Hydro:</label><span class="value"></span></span>
+
+					<span class="formitem formfield"><label>Gas:</label><span class="value"></span></span>
+
+					<span class="formitem formfield"><label>Phone:</label><span class="value"></span></span>
+
+					<span class="formitem formfield"><label>Water:</label><span class="value">Municipal</span></span>
+
+					<span class="formitem formfield"><label>Water Supply:</label><span class="value"></span></span>
+
+					<span class="formitem formfield"><label>Sewer:</label><span class="value">Sewers</span></span>
+
+					<span class="formitem formfield"><label>Spec Desig:</label><span class="value">Unknown</span></span>
+
+					<span class="formitem formfield"><label>Farm/Agr:</label><span class="value"></span></span>
+
+					<span class="formitem formfield"><label>Waterfront:</label><span class="value"></span></span>
+
+					<span class="formitem formfield"><label>Retirement:</label><span class="value"></span></span>
+
+					<div class="formitem formgroup horizontal">
+
+						<span class="formitem formfield"><label>Oth Struct:</label><span class="value"></span></span>
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="formitem formgroup horizontal">
+
+			<div class="formitem formgroup vertical" style="width:1%">
+<span class="formliteral formitem"> </span>
+
+			</div>
+
+			<div class="formitem formgroup vertical" style="width:3%">
+<b><u>#</u></b>
+
+			</div>
+
+			<div class="formitem formgroup vertical" style="width:11%">
+<b><u>Room</u></b>
+
+			</div>
+
+			<div class="formitem formgroup vertical" style="width:11%">
+<b><u>Level</u></b>
+
+			</div>
+
+			<div class="formitem formgroup vertical" style="width:10%; text-decoration: underline;font-weight: bold;">
+
+				<span class="formitem formfield"><span class="value"></span></span>
+
+			</div>
+
+			<div class="formitem formgroup vertical" style="width:2%">
+<span class="formliteral formitem"> </span>
+
+			</div>
+
+			<div class="formitem formgroup vertical" style="width:12%; text-decoration: underline;font-weight: bold;">
+
+				<span class="formitem formfield"><span class="value"></span></span>
+
+			</div>
+
+			<div class="formitem formgroup vertical" style="width:47%">
+<b><u>Description</u></b>
+
+			</div>
+
+		</div>
+
+		<div class="formitem formgroup vertical">
+
+			<div class="formitem formgroup vertical">
+
+				<div class="formitem formgroup horizontal">
+
+					<div class="formitem formgroup vertical" style="width:1%">
+<span class="formliteral formitem"> </span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:3%;">
+
+						<span class="formitem formfield"><span class="value">1</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Living</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Main</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:10%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:2%;min-height:2px;">
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:12%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value">Laminate</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:18%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="formitem formgroup vertical">
+
+				<div class="formitem formgroup horizontal">
+
+					<div class="formitem formgroup vertical" style="width:1%">
+<span class="formliteral formitem"> </span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:3%;">
+
+						<span class="formitem formfield"><span class="value">2</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Kitchen</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Main</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:10%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:2%;min-height:2px;">
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:12%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value">W/O To Balcony</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:18%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="formitem formgroup vertical">
+
+				<div class="formitem formgroup horizontal">
+
+					<div class="formitem formgroup vertical" style="width:1%">
+<span class="formliteral formitem"> </span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:3%;">
+
+						<span class="formitem formfield"><span class="value">3</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Master</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">2nd</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:10%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:2%;min-height:2px;">
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:12%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value">Laminate</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:18%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="formitem formgroup vertical">
+
+				<div class="formitem formgroup horizontal">
+
+					<div class="formitem formgroup vertical" style="width:1%">
+<span class="formliteral formitem"> </span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:3%;">
+
+						<span class="formitem formfield"><span class="value">4</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">2nd Br</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">2nd</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:10%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:2%;min-height:2px;">
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:12%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value">Laminate</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:18%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="formitem formgroup vertical">
+
+				<div class="formitem formgroup horizontal">
+
+					<div class="formitem formgroup vertical" style="width:1%">
+<span class="formliteral formitem"> </span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:3%;">
+
+						<span class="formitem formfield"><span class="value">5</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">3rd Br</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">2nd</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:10%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:2%;min-height:2px;">
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:12%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value">Laminate</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:18%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="formitem formgroup vertical">
+
+				<div class="formitem formgroup horizontal">
+
+					<div class="formitem formgroup vertical" style="width:1%">
+<span class="formliteral formitem"> </span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:3%;">
+
+						<span class="formitem formfield"><span class="value">6</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Living</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:11%;">
+
+						<span class="formitem formfield"><span class="value">Bsmt</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:10%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:2%;min-height:2px;">
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:12%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value">W/O To Yard</span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:16%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+					<div class="formitem formgroup vertical" style="width:18%;">
+
+						<span class="formitem formfield"><span class="value"></span></span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="formitem formgroup vertical" style="width:750px;border-bottom: thin solid #000000;">
+
+		</div>
+
+		<div class="formitem formgroup vertical">
+
+			<span class="formitem formfield"><label style="text-align:left;display:inline;;">Client Remks:</label><span class="value" style="display:inline;">All Brick Home With Several Sizable Windows Allow For  Plenty Of Natural Light To Encompass This Home Giving It That Radiant And Lavish Feel. Situated On A Corner Lot Gives This Home A Bigger Look And Feel While Also Sitting On One Of The Highest Elevations On The Street  With Unbelievable Views.  This Stunning Home Also Has The Added Benefit Of A Walkout Basement And In-Law Suite.</span></span>
+
+			<span class="formitem formfield"><label style="text-align:left;;display:inline;;">Extras:</label><span class="value" style="display:inline;">Fridge, Stove, Dishwasher, Garage Door Opener, Window Coverings On Main &amp; 2nd Floor Only.  Walking Distance To Schools, Georgian College, Royal Victorian Hospital And The Future  Home Of Zehr's Superstore &amp; Cineplex Theatres.</span></span><hr>
+</div>
+
+		<div class="formitem formgroup vertical">
+
+			<div class="formitem formgroup horizontal">
+
+				<span class="formitem formfield"><label>Listing Contracted With:</label><a href="Javascript:showOfficePopup('222700');" class="formlink value">HOMELIFE CLASSIC REALTY INC., BROKERAGE</a></span>
+
+				<span class="formitem formfield"><label>Ph:</label><span class="value">647-479-8477</span></span>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+<hr class="clearfix">
+<div class="footer">Toronto Real Estate Board (TREB) assumes no responsibility for the accuracy of any information shown. Copyright TREB 2016.</div>
+</div>
+</div>
+
+				</div>
+
+			
+
+
+
+		</div>
+
+
+
+    </div>
+
+    </form>
+
+
+
+	 <div id="PdfDiv" style="display:none"></div>
+
+
+
+	 <script src="links/Link.include.debug.js?18965" type="text/javascript"></script><script type="text/javascript">
+
+		
+
+		var rootUrl = '/Live/';
+
+		window.serviceUrl = '/Live/Pages/Services/PdfService.svc';
+
+		window.rootUrl = rootUrl;
+
+		window.currentAppName = 'TREB';
+
+	    window.formID = '82';
+
+	    
+
+		window.columnSetID = '19496';
+
+	 	window.bingApiKey = 'AhlqhvgWr7t8m5Jxt3dIHp8TJfFXxe8QIdT61UAGhk6Qtc7u4b50qDh2UD9-amTJ';
+
+
+
+		var _link = {"appName":"TREB","attributes":[{"linkAttributeID":null,"linkID":108571890,"name":"Criteria","value":"{\"name\":\"Residential Freehold, Available, Sale\",\"conditions\":[{\"operator\":\"AND\",\"name\":\"area_code\",\"predicates\":[{\"opcode\":\"=\",\"value\":\"04\"}],\"parentConditionName\":null,\"type\":\"String\"},{\"operator\":\"AND\",\"name\":\"municipality_code\",\"predicates\":[{\"opcode\":\"=\",\"value\":\"04.15\"},{\"opcode\":\"=\",\"value\":\"04.14\"}],\"parentConditionName\":null,\"type\":\"String\"},{\"operator\":\"AND\",\"name\":\"br\",\"predicates\":[{\"opcode\":\">=\",\"value\":3}],\"parentConditionName\":null,\"type\":\"Int32\"},{\"operator\":\"AND\",\"name\":\"br_plus\",\"predicates\":[{\"opcode\":\">=\",\"value\":1}],\"parentConditionName\":null,\"type\":\"Int32\"},{\"operator\":\"AND\",\"name\":\"num_kit\",\"predicates\":[{\"opcode\":\">=\",\"value\":1}],\"parentConditionName\":null,\"type\":\"Int32\"},{\"operator\":\"AND\",\"name\":\"kit_plus\",\"predicates\":[{\"opcode\":\">=\",\"value\":1}],\"parentConditionName\":null,\"type\":\"Int32\"}]}"},{"linkAttributeID":null,"linkID":108571890,"name":"EntityKey","value":"{\"appName\":\"TREB\",\"metadataName\":\"TREB\",\"entityName\":\"Listing\"}"},{"linkAttributeID":null,"linkID":108571890,"name":"Footer","value":"Toronto Real Estate Board (TREB) assumes no responsibility for the accuracy of any information shown. Copyright TREB 2016."},{"linkAttributeID":null,"linkID":108571890,"name":"PreparedBy","value":"9565157"}],"created":"\/Date(1465483388373-0400)\/","expire":null,"groupAppName":null,"groupID":null,"guid":"0c00bf31977a4a76a78484c9a6cbed52","items":[],"linkID":108571890,"linkRef":null,"modified":"\/Date(1465530138210-0400)\/","requests":9,"userAppName":"TREB","userID":"9565157"};
+
+
+		var _mapIcons = {"mapIconUrls":[{"url":"~\/Images\/Icons\/PNG\/24\/84.png","urlName":"Red","value":"dft","visibleName":"Available"},{"url":"~\/Images\/Icons\/PNG\/24\/84.png","urlName":"Red","value":"ext","visibleName":"Available"},{"url":"~\/Images\/Icons\/PNG\/24\/84.png","urlName":"Red","value":"new","visibleName":"Available"},{"url":"~\/Images\/Icons\/PNG\/24\/84.png","urlName":"Red","value":"pc","visibleName":"Available"},{"url":"~\/Images\/Icons\/PNG\/24\/150.png","urlName":"Magenta","value":"exp","visibleName":"Expired"},{"url":"~\/Images\/Icons\/PNG\/24\/152.png","urlName":"Cyan","value":"lsd","visibleName":"Leased"},{"url":"~\/Images\/Icons\/PNG\/24\/86.png","urlName":"Green","value":"lc","visibleName":"Leased Conditionally"},{"url":"~\/Images\/Icons\/PNG\/24\/88.png","urlName":"Blue","value":"sld","visibleName":"Sold"},{"url":"~\/Images\/Icons\/PNG\/24\/86.png","urlName":"Green","value":"sc","visibleName":"Sold Conditionally"},{"url":"~\/Images\/Icons\/PNG\/24\/82.png","urlName":"Yellow","value":"sus","visibleName":"Suspended"},{"url":"~\/Images\/Icons\/PNG\/24\/151.png","urlName":"Gray","value":"ter","visibleName":"Terminated"}],"propertyName":"lsc"};
+
+
+
+
+		function getMapIcon(lsc) {
+
+			lsc = lsc.toLowerCase().split('-').reverse()[0];
+
+
+
+			if (window.mapIconMap) {
+
+				return window.mapIconMap[lsc];
+
+			}
+
+
+
+			var m = window._mapIcons || {};
+
+			var is = m.mapIconUrls || [];
+
+			var iconMap = [];
+
+			for (var i = 0; i < is.length; i++) {
+
+				iconMap[is[i].value.toLowerCase()] = is[i].url.replace('~/', window.rootUrl);
+
+			}
+
+
+
+			window.mapIconMap = iconMap;
+
+			return getMapIcon(lsc);
+
+		}
+
+
+
+		
+
+			var defaultMapLocation = { address: "", latitude: "43.6485647686815", longitude: "-79.3853294849396", zoom: 10 };
+
+		
+
+
+
+	     function viewInCollab() {
+
+	         window.location = "http://v3.torontomls.net/Live/Pages/Public/CollabLink.aspx?Key=0c00bf31977a4a76a78484c9a6cbed52&App=TREB";
+
+         }
+
+	</script>
+</body>
+</html>
