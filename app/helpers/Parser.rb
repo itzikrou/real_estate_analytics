@@ -2,9 +2,8 @@ require 'open-uri'
 
 class Parser
 
-	
 	def url
-		"http://v3.torontomls.net/Live/Pages/Public/Link.aspx?Key=14ed9b2ecf214e38886b2346b58a34b7&App=TREB"
+		"http://v3.torontomls.net/Live/Pages/Public/Link.aspx?Key=53d4281bbb43456a9c0943f3cff1b0a1&App=TREB"
 	end
 
 	def parse
@@ -43,6 +42,16 @@ class Parser
 			bath_tot			= extra_details["bath_tot"]
 			style					= extra_details["style"] #1 1/2 Storey \ Bungalow-Raised \ 2-Storey \ Apartment
 
+			# mls_link
+
+			# client_remarks_xpath = "//*[@id=\"#{ml_num}\"]/div[2]/div[2]/div[1]/div/div[7]/span[1]/span/text()"
+			client_remarks 	= item.xpath("//*[@id=\"#{ml_num}\"]/div[2]/div[2]/div[1]/div/div[7]/span[1]/span/text()")			
+			extras 	= item.xpath("//*[@id=\"#{ml_num}\"]/div[2]/div[2]/div[1]/div/div[7]/span[2]/span/text()")
+			dom 		= item.xpath("//*[@id=\"#{ml_num}\"]/div[2]/div[2]/div[1]/div/div[1]/div/div[2]/div[4]/div[3]/span/span/text()").to_s
+			taxes = item.xpath("//*[@id=\"#{ml_num}\"]/div[2]/div[2]/div[1]/div/div[1]/div/div[2]/div[2]/div[1]/div/span[1]/span/text()").to_s
+			taxes.slice!('$')
+			taxes.slice!(',')
+
 			entry = Entry.find_or_create_by(mls_id: ml_num)
 			entry.address = addr
 			entry.municipality = municipality
@@ -53,7 +62,15 @@ class Parser
 			entry.postal = zip
 			entry.address = addr
 			entry.address = addr
+			entry.client_remarks = client_remarks.to_s + ',' + extras.to_s
+			entry.dom = dom.to_i unless dom.blank?
+			entry.taxes = taxes
 			entry.save!
+
+			# single_details_view = doc.xpath('//*[@id="E3497606"]')
+			# ap single_details_view = doc.xpath('//*[@class="formitem formfield"]')
+
+			# doc.xpath('//*[@id="E3278846"]/div[2]/div[2]/div[1]/div/div[1]/div/div[2]/div[1]/div/div[2]/div/div[1]/span 
 		end
 
 
