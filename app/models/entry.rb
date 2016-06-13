@@ -5,6 +5,9 @@
 #  id             :integer          not null, primary key
 #  mls_id         :string
 #  address        :string
+#  street_name    :string
+#  street_number  :string
+#  listing_status :string
 #  municipality   :string
 #  apt_unit       :string
 #  beds           :integer
@@ -17,6 +20,7 @@
 #  dom            :integer
 #  taxes          :integer
 #  client_remarks :text
+#  raw_data       :text
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
 #

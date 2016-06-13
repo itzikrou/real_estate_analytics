@@ -19,6 +19,9 @@ ActiveRecord::Schema.define(version: 20160610020256) do
   create_table "entries", force: :cascade do |t|
     t.string   "mls_id"
     t.string   "address"
+    t.string   "street_name"
+    t.string   "street_number"
+    t.string   "listing_status"
     t.string   "municipality"
     t.string   "apt_unit"
     t.integer  "beds"
@@ -31,6 +34,7 @@ ActiveRecord::Schema.define(version: 20160610020256) do
     t.integer  "dom"
     t.integer  "taxes"
     t.text     "client_remarks"
+    t.text     "raw_data"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end

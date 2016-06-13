@@ -3,10 +3,10 @@ require 'open-uri'
 class Parser
 
 	def url
-		"http://v3.torontomls.net/Live/Pages/Public/Link.aspx?Key=53d4281bbb43456a9c0943f3cff1b0a1&App=TREB"
+		"http://v3.torontomls.net/Live/Pages/Public/Link.aspx?Key=5a618413ea3949c6b0e3356fb767b5af&App=TREB"
 	end
 
-	def parse
+	def parse(url)
 		doc = Nokogiri::HTML(open(url)) do |config|
   			config.strict.nonet.noblanks
 		end
@@ -41,16 +41,19 @@ class Parser
 			br						= extra_details["br"].to_i
 			bath_tot			= extra_details["bath_tot"]
 			style					= extra_details["style"] #1 1/2 Storey \ Bungalow-Raised \ 2-Storey \ Apartment
+			raw_data 			= item.to_s
 
-			# mls_link
 
-			# client_remarks_xpath = "//*[@id=\"#{ml_num}\"]/div[2]/div[2]/div[1]/div/div[7]/span[1]/span/text()"
-			client_remarks 	= item.xpath("//*[@id=\"#{ml_num}\"]/div[2]/div[2]/div[1]/div/div[7]/span[1]/span/text()")			
-			extras 	= item.xpath("//*[@id=\"#{ml_num}\"]/div[2]/div[2]/div[1]/div/div[7]/span[2]/span/text()")
-			dom 		= item.xpath("//*[@id=\"#{ml_num}\"]/div[2]/div[2]/div[1]/div/div[1]/div/div[2]/div[4]/div[3]/span/span/text()").to_s
-			taxes = item.xpath("//*[@id=\"#{ml_num}\"]/div[2]/div[2]/div[1]/div/div[1]/div/div[2]/div[2]/div[1]/div/span[1]/span/text()").to_s
+			client_remarks = item.xpath("//*[@id=\"#{ml_num}\"]/div[2]/div[2]/div[1]/div/div[7]/span[1]/span/text()")			
+			extras = item.xpath("//*[@id=\"#{ml_num}\"]/div[2]/div[2]/div[1]/div/div[7]/span[2]/span/text()")
+			dom = item.xpath("//*[@id=\"#{ml_num}\"]/div[2]/div[2]/div[1]/div/div[1]/div/div[2]/div[4]/div[3]/span/span/text()").to_s
+			
+			# Taxes
+			taxes 	= item.xpath("//*[@id=\"#{ml_num}\"]/div[2]/div[2]/div[1]/div/div[1]/div/div[2]/div[2]/div[1]/div/span[1]/span/text()").to_s
 			taxes.slice!('$')
 			taxes.slice!(',')
+			# lot
+			lot = item.xpath("//*[@id=\"#{ml_num}\"]/div[2]/div[2]/div[1]/div/div[1]/div/div[2]/div[4]/div[1]/div[1]/span[3]/span/text()")
 
 			entry = Entry.find_or_create_by(mls_id: ml_num)
 			entry.address = addr
@@ -65,12 +68,16 @@ class Parser
 			entry.client_remarks = client_remarks.to_s + ',' + extras.to_s
 			entry.dom = dom.to_i unless dom.blank?
 			entry.taxes = taxes
-			entry.save!
+			entry.raw_data = raw_data
+			entry.save! 
+		end
 
-			# single_details_view = doc.xpath('//*[@id="E3497606"]')
-			# ap single_details_view = doc.xpath('//*[@class="formitem formfield"]')
-
-			# doc.xpath('//*[@id="E3278846"]/div[2]/div[2]/div[1]/div/div[1]/div/div[2]/div[1]/div/div[2]/div/div[1]/span 
+		def bulk_import
+			line_num=0
+			File.open('C:\Sites\mls_app\input.txt').each do |line|
+			  print "#{line_num += 1} #{line}"
+			  parse(line)
+			end
 		end
 
 

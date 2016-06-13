@@ -3,6 +3,9 @@ class CreateEntries < ActiveRecord::Migration
     create_table :entries do |t|
     	t.string 	:mls_id
     	t.string	:address
+        t.string    :street_name
+        t.string    :street_number
+        t.string    :listing_status
     	t.string	:municipality
     	t.string	:apt_unit
     	t.integer	:beds
@@ -15,6 +18,7 @@ class CreateEntries < ActiveRecord::Migration
     	t.integer	:dom
     	t.integer	:taxes
     	t.text		:client_remarks
+        t.text      :raw_data
 
       t.timestamps null: false
     end
