@@ -11,6 +11,7 @@ class Parser
   			config.strict.nonet.noblanks
 		end
 
+		Listing.create!(raw_email: doc.to_s)
 		arr = []
 		doc.css('tbody tr').each do |link| 
 			arr << link
@@ -55,6 +56,11 @@ class Parser
 			# lot
 			lot = item.xpath("//*[@id=\"#{ml_num}\"]/div[2]/div[2]/div[1]/div/div[1]/div/div[2]/div[4]/div[1]/div[1]/span[3]/span/text()")
 
+			# Street & Number
+			white_space_index = addr.index(' ')
+			street_name = addr[white_space_index..addr.size].strip
+			street_number = addr[0..white_space_index-1].strip
+
 			entry = Entry.find_or_create_by(mls_id: ml_num)
 			entry.address = addr
 			entry.municipality = municipality
@@ -69,6 +75,8 @@ class Parser
 			entry.dom = dom.to_i unless dom.blank?
 			entry.taxes = taxes
 			entry.raw_data = raw_data
+			entry.street_name = street_name
+			entry.street_number = street_number
 			entry.save! 
 		end
 
