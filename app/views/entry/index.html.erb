@@ -1,0 +1,19 @@
+<h1>Listing entries</h1>
+ 
+<table>
+  <tr>
+    <th>mls_id</th>
+    <th>address</th>
+    <th>municipality</th>
+    <th>list_price</th>
+  </tr>
+ 
+  <% @entries.each do |entry| %>  
+    <tr>
+      <td><%= entry.mls_id %></td>
+      <td><%= entry.address %></td>
+      <td><%= entry.municipality %></td>
+      <td><%= entry.list_price %></td>
+    </tr>
+  <% end %>
+</table>
