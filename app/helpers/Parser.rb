@@ -82,7 +82,7 @@ class Parser
 
 		def bulk_import
 			line_num=0
-			File.open('C:\Sites\mls_app\input.txt').each do |line|
+			File.open('C:\Sites\mls_app\input1.txt').each do |line|
 			  print "#{line_num += 1} #{line}"
 			  parse(line)
 			end
