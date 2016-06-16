@@ -14,8 +14,4 @@ class EntryController < ApplicationController
   	@entry = Entry.find(params[:id])
 	end
 
-
-  	def set_params
-
-  	end
 end
