@@ -1,7 +1,5 @@
 class EntryController < ApplicationController
 
-	before_action :set_params
-
 	def index		
 		if params[:street_name].present?
 			@entries = Entry.where(street_name: params[:street_name])
