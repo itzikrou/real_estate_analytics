@@ -1,0 +1,8 @@
+  <h3><%= link_to '<< Back', controller: 'entries', action: 'index' %> </h3>
+
+  <tr><%= @entry.mls_id %></tr>
+  <tr><%= @entry.address %></tr>
+  <tr><%= @entry.municipality %></tr>
+  <tr><%= @entry.list_price %></tr>
+  <tr><%= @entry.lsc %></tr>
+  <tr><%= @entry.updated_at.to_date %></tr>

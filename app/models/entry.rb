@@ -28,4 +28,10 @@
 class Entry < ActiveRecord::Base
 
 
+	def self.search(search)
+debugger		
+	  where("address LIKE ?", "%#{search}%") 
+	  # where("content LIKE ?", "%#{search}%")
+	end
+
 end
