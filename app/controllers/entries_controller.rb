@@ -9,9 +9,10 @@ class EntriesController < ApplicationController
 	#   end
  #  end
 
-  def index 	
+  def index  	
 	  @q = Entry.ransack(params[:q])
 	  @entries = @q.result(distinct: true)
+	  @entries.order(updated_at: :desc, street_name: :desc)
 	end
  
 	def show		

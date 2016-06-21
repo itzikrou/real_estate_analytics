@@ -1,8 +1,36 @@
   <h3><%= link_to '<< Back', controller: 'entries', action: 'index' %> </h3>
 
-  <tr><%= @entry.mls_id %></tr>
-  <tr><%= @entry.address %></tr>
+
+
+<h1>Listing entries</h1>
+<table>
+<!--   <tr>
+    <th>mls_id</th>
+    <th>address</th>
+    <th>municipality</th>
+    <th>postal</th>
+    <th>list_price</th>
+    <th>Status</th>
+    <th>Listing Date</th>
+    <th>Taxes</th>
+    <th>Client Remarks</th>
+  </tr> -->
+
+  <tr>MLS_ID: <%= @entry.mls_id %></tr>
+  <br>
+  <tr>Address: <%= @entry.address %></tr>
+  <br>
   <tr><%= @entry.municipality %></tr>
+  <br>
+  <tr><%= @entry.postal %></tr>
+  <br>
   <tr><%= @entry.list_price %></tr>
+  <br>
   <tr><%= @entry.lsc %></tr>
+  <br>
+  <tr><%= @entry.taxes %></tr>
+  <br>
+  <tr><%= @entry.client_remarks %></tr>
+  <br>
   <tr><%= @entry.updated_at.to_date %></tr>
+  </table>
