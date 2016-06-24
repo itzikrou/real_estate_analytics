@@ -11,15 +11,14 @@
 <table>
   <tr>
     <th>mls_id</th>
-    <!-- <th>postal</th> -->
     <th><%= sort_link(@q, :postal) %></th>
-    <!-- <th>address</th> -->
     <th><%= sort_link(@q, :address) %></th>
     <th><%= sort_link(@q, :street_name) %></th>
     <th>municipality</th>
+    <th>Beds</th>
+    <th>Washrooms</th>
     <th>list_price</th>
     <th><%= sort_link(@q, :lsc) %></th>
-    <!-- <th>Status</th> -->
     <th>Listing Date</th>
   </tr>
  
@@ -30,9 +29,12 @@
       <td><%= entry.address %></td>
       <td><%= entry.street_name %></td>
       <td><%= entry.municipality %></td>
+      <td><%= entry.beds %></td>
+      <td><%= entry.wr %></td>
       <td><%= entry.list_price %></td>
       <td><%= entry.lsc %></td>
       <td><%= entry.updated_at.to_date %></td>
+
       <td><%= link_to 'Show', controller: 'entries', action: 'show', id: entry.id %><td>
       <td><%= link_to 'Edit', controller: 'entries' %><td>
       <td><%= link_to 'Delete', controller: 'entries' %><td>
