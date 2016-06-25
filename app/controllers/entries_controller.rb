@@ -11,7 +11,4 @@ class EntriesController < ApplicationController
   	@entry = Entry.find(params[:id])
 	end
 
-	def create
-	end
-
 end
