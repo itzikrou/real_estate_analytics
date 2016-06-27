@@ -28,19 +28,10 @@ class NewListingParser
 				detailed_reports << link 
 			end
 		end
-
+		# build listing data
 		build_entries(general_summaries, detailed_reports)
 
 	end
-
-	def create_listing(html)
-		Listing.create!(raw_email: html.to_s)
-	end
-
-	# page.css("div[class='reports view-pm'] div").each do |link| arr << link end # get entire entry data
-	# item.css("span[class = 'formitem formfield']").each do |l| form_items << l end # get all data objects
-	# item.css("span[class='formitem formfield']").css("label") # just the labels
-	# form_items[55].css('label').text
 
 	def build_entries(general_summaries, detailed_reports)
 		valid_report_min_entries = 20
@@ -55,7 +46,6 @@ class NewListingParser
 			detailed_attributes.push(parsed_detailes) unless parsed_detailes.blank?	|| parsed_detailes["MLS#:"].blank?
 		}
 		filtered_reports = detailed_attributes.reject{|da| da.keys.count < valid_report_min_entries}.uniq
-
 	end
 
 	def extract_detailed_attributes(property_form)
@@ -125,6 +115,10 @@ class NewListingParser
 	end
 
 private
+
+	def create_listing(html)
+		Listing.create!(raw_email: html.to_s)
+	end
 
 
 end

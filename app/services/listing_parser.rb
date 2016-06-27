@@ -17,10 +17,6 @@ class ListingParser
 		}
 	end
 
-	# page.css("div[class='reports view-pm'] div").each do |link| arr << link end # get entire entry data
-	# item.css("span[class = 'formitem formfield']").each do |l| form_items << l end # get all data objects
-	# item.css("span[class='formitem formfield']").css("label") # just the labels
-
 	def self.extract_single_entry(item)
 		hash = Hash.from_xml(item.to_s)
 		extra_details 	= JSON.parse(hash["tr"]["data_pop_up"])			
