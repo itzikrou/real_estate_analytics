@@ -2,12 +2,6 @@ require 'open-uri'
 
 class NewListingParser
 
-
-	# def initialize
-	# 	@general_summaries 	= []
-	# 	@detailed_reports 	= []
-	# end
-
 	def parse(url)
 
 		general_summaries 	= []
