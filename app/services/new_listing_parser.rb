@@ -105,7 +105,6 @@ private
 		images_links = {}		
 		images_data.each{|image|
 			urls = []
-debugger
 			images = JSON.parse(image.as_json[3][1])
 			images['multi-photos'].each{|item|
 				urls << item['url'] unless item['url'].blank?
