@@ -2,35 +2,42 @@ require 'open-uri'
 
 class NewListingParser
 
-	def parse(url)
+	def parse_url(url)
+		page = Nokogiri::HTML(open(url)) do |config|
+  		config.strict.nonet.noblanks
+		end
+		parse(page)
+	end
+
+	def parse(html)
 		general_summaries 	= []
 		detailed_reports 		= []
 		images_links				= []
 		
-		# get the entire page
-		page = Nokogiri::HTML(open(url)) do |config|
-  			config.strict.nonet.noblanks
-		end
+		# # get the entire page
+		# page = Nokogiri::HTML(open(url)) do |config|
+  # 			config.strict.nonet.noblanks
+		# end
 
 		# get the summary
-		page.css('tbody tr').each do |link| 
+		html.css('tbody tr').each do |link| 
 			general_summaries << link
 		end
 		
 		# get entire entry data NEW
-		page.css("div[class='reports view-pm'] div").each do |link| 
+		html.css("div[class='reports view-pm'] div").each do |link| 
 			detailed_reports << link 
 		end
 
 		# get entire entry data History
 		if detailed_reports.blank?
-			page.css("div[class='reports view-clf'] div").each do |link| 
+			html.css("div[class='reports view-clf'] div").each do |link| 
 				detailed_reports << link 
 			end
 		end
 
 		# fetch all images links
-		page.css("img").each do |link|
+		html.css("img").each do |link|
 		 images_links << link
 		end
 		images = extract_images_urls(images_links)
@@ -38,6 +45,23 @@ class NewListingParser
 		# build listing data
 		build_entries(general_summaries, detailed_reports)
 	end
+
+	def bulk_import(file_path)
+		line_num=0
+		File.open(file_path).each do |line|
+		  print "#{line_num += 1} #{line}"
+		  parse(line)
+		end
+	end
+
+private
+
+	DATE_PATH 								= "//*[@id='form1']/div[3]/div[1]/div/div[3]"
+	REPORTS_NEW_PATH					= "div[class='reports view-pm'] div"
+	REPORTS_SOLD_PATH 				= "div[class='reports view-pm'] div"
+	SUMMARY_PATH 							= "tbody tr"
+	IMAGES_PATH								= "img"
+	VALID_REPORTS_MIN_ENTRIES = 20
 
 	def extract_print_date(page)
 		header = page.css("div[class=header]").css("div")[5].text
@@ -78,9 +102,10 @@ class NewListingParser
 	end
 
 	def extract_images_urls(images_data)
-		images_links = {}
+		images_links = {}		
 		images_data.each{|image|
-			urls = []			
+			urls = []
+debugger
 			images = JSON.parse(image.as_json[3][1])
 			images['multi-photos'].each{|item|
 				urls << item['url'] unless item['url'].blank?
@@ -97,23 +122,6 @@ class NewListingParser
 		hash = Hash.from_xml(summary_form.to_s)
 		extra_details 	= JSON.parse(hash["tr"]["data_pop_up"])			
 	end
-
-	def bulk_import(file_path)
-		line_num=0
-		File.open(file_path).each do |line|
-		  print "#{line_num += 1} #{line}"
-		  parse(line)
-		end
-	end
-
-private
-
-	DATE_PATH 								= "//*[@id='form1']/div[3]/div[1]/div/div[3]"
-	REPORTS_NEW_PATH					= "div[class='reports view-pm'] div"
-	REPORTS_SOLD_PATH 				= "div[class='reports view-pm'] div"
-	SUMMARY_PATH 							= "tbody tr"
-	IMAGES_PATH								= "img"
-	VALID_REPORTS_MIN_ENTRIES = 20
 
 	def create_listing(html)
 		Listing.create!(raw_email: html.to_s)

@@ -25,5 +25,9 @@ class Listing < ActiveRecord::Base
 		File.open(full_path, 'w') { |file| file.write(self.raw_email) }
 	end
 
+	def extract_data
+		NewListingParser.new.parse(to_html)
+	end
+
 
 end
