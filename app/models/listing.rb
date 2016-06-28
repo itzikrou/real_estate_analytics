@@ -10,6 +10,8 @@
 
 class Listing < ActiveRecord::Base
 
+	# after save callback
+	# parse
 
 	def to_xml
 		info_doc = Nokogiri::XML(self.raw_email)
@@ -22,5 +24,6 @@ class Listing < ActiveRecord::Base
 	def write_to_file(full_path)
 		File.open(full_path, 'w') { |file| file.write(self.raw_email) }
 	end
+
 
 end
