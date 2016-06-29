@@ -10,14 +10,9 @@ class NewListingParser
 	end
 
 	def parse(html)
-		general_summaries 	= []
-		detailed_reports 		= []
-		images_links				= []
-		
-		# # get the entire page
-		# page = Nokogiri::HTML(open(url)) do |config|
-  # 			config.strict.nonet.noblanks
-		# end
+		general_summaries	= []
+		detailed_reports	= []
+		images_links			= []
 
 		# get the summary
 		html.css('tbody tr').each do |link| 
@@ -36,14 +31,15 @@ class NewListingParser
 			end
 		end
 
+		print_date = extract_print_date(html)		
+
 		# fetch all images links
 		html.css("img").each do |link|
 		 images_links << link
 		end
-		images = extract_images_urls(images_links)
 
 		# build listing data
-		build_entries(general_summaries, detailed_reports)
+		build_entries(general_summaries, detailed_reports, images_links, print_date)
 	end
 
 	def bulk_import(file_path)
@@ -65,14 +61,15 @@ private
 
 	def extract_print_date(page)
 		header = page.css("div[class=header]").css("div")[5].text
-		regex = "/\d{1,2}\/\d{1,2}\/\d{4}/"
+		regex = /\d{1,2}\/\d{1,2}\/\d{4}/
 		header[regex]
 	end
 
-	def build_entries(general_summaries, detailed_reports)
-		valid_report_min_entries = 20
+	def build_entries(general_summaries, detailed_reports, images_links, print_date)
+		valid_report_min_entries = 10
 		detailed_attributes = []
 		summary_attributes 	= []
+		images 							= {}
 		
 		general_summaries.each{ |summary|
 			summary_attributes.push(extract_summary_attributes(summary))
@@ -80,9 +77,12 @@ private
 
 		detailed_reports.each{ |detail_report|
 			parsed_detailes = extract_detailed_attributes(detail_report)
-			detailed_attributes.push(parsed_detailes) unless parsed_detailes.blank?	|| parsed_detailes["MLS#:"].blank?
+			detailed_attributes.push(parsed_detailes)# unless parsed_detailes.blank?	|| parsed_detailes["MLS#:"].blank?
 		}
-		filtered_reports = detailed_attributes.reject{|da| da.keys.count < valid_report_min_entries}.uniq		
+		filtered_reports = detailed_attributes.uniq{|a| a["MLS#:"]}.compact #detailed_attributes.reject{|da| da.keys.count < valid_report_min_entries}.uniq
+		images = extract_images_urls(images_links)
+debugger		
+
 	end
 
 	def extract_detailed_attributes(property_form)
@@ -104,17 +104,30 @@ private
 	def extract_images_urls(images_data)
 		images_links = {}		
 		images_data.each{|image|
-			urls = []
-			images = JSON.parse(image.as_json[3][1])
-			images['multi-photos'].each{|item|
-				urls << item['url'] unless item['url'].blank?
-			}
-			end_index 	= urls[0].index('.jpg') - 1
-			start_index = end_index - 7
-			mls_id 			= urls[0][start_index..end_index]
-			images_links[mls_id] = urls
-		}
+			urls = []			
+			
+			if image.as_json[0][1].blank?
+				return
+			end
+
+			urls << image.as_json[0][1]
+			mls_id = extract_mls_id_from_image_url(image.as_json[0][1])
+
+			if image.has_attribute?('data-multi-photos')
+				images = JSON.parse(image.as_json[3][1])
+				images['multi-photos'].each{ |item|
+					urls << item['url'] unless item['url'].blank?
+				}
+			end
+			images_links[mls_id] = urls.uniq
+		}		
 		images_links
+	end
+
+	def extract_mls_id_from_image_url(url)		
+			end_index 	= url.index('.jpg') - 1 rescue nil
+			start_index = end_index - 7
+			mls_id 			= url[start_index..end_index]
 	end
 
 	def extract_summary_attributes(summary_form)		
