@@ -9,6 +9,12 @@ class NewListingParser
 		parse(page)
 	end
 
+	def scrape_url(url)
+		page = Nokogiri::HTML(open(url)) do |config|
+  		config.strict.nonet.noblanks
+		end
+	end
+
 	def parse(html)
 		general_summaries	= []
 		detailed_reports	= []
@@ -57,32 +63,48 @@ private
 	REPORTS_SOLD_PATH 				= "div[class='reports view-pm'] div"
 	SUMMARY_PATH 							= "tbody tr"
 	IMAGES_PATH								= "img"
-	VALID_REPORTS_MIN_ENTRIES = 20
+	PHOTO_NOT_EXIST 					= "http://static.stratusmls.com/StratusMLS/3.6/Images/PhotoNotAvailable.png"
 
 	def extract_print_date(page)
-		header = page.css("div[class=header]").css("div")[5].text
-		regex = /\d{1,2}\/\d{1,2}\/\d{4}/
-		header[regex]
+		begin
+			header = page.css("div[class=header]").css("div")[5].text
+			regex = /\d{1,2}\/\d{1,2}\/\d{4}/
+			header[regex]
+		end	
+		rescue
+			nil
 	end
 
-	def build_entries(general_summaries, detailed_reports, images_links, print_date)
-		valid_report_min_entries = 10
-		detailed_attributes = []
-		summary_attributes 	= []
-		images 							= {}
+	def build_entries(raw_summaries, raw_detailed_reports, raw_images_links, print_date)
+		detailed_report_attributes 	= []
+		summary_attributes = []
+		images = {}
 		
-		general_summaries.each{ |summary|
+		raw_summaries.each{ |summary|
 			summary_attributes.push(extract_summary_attributes(summary))
 		}
 
-		detailed_reports.each{ |detail_report|
-			parsed_detailes = extract_detailed_attributes(detail_report)
-			detailed_attributes.push(parsed_detailes)# unless parsed_detailes.blank?	|| parsed_detailes["MLS#:"].blank?
+		raw_detailed_reports.each{ |detail_report|
+			parsed_detailes = extract_detailed_attributes(detail_report)			
+			detailed_report_attributes.push(parsed_detailes) unless parsed_detailes.blank?
 		}
-		filtered_reports = detailed_attributes.uniq{|a| a["MLS#:"]}.compact #detailed_attributes.reject{|da| da.keys.count < valid_report_min_entries}.uniq
-		images = extract_images_urls(images_links)
-debugger		
 
+		filtered_detailed_report_attributes = detailed_report_attributes.uniq{|a| a["MLS#:"] && a["MLS#:"].present?}.compact
+		images = extract_images_urls(raw_images_links)
+
+		# build unique listings
+		mls_ids = summary_attributes.map{|summary| summary['ml_num']}
+		
+		hash = {}
+		mls_ids.each{|mls_id|
+			inner_hash = {}
+			inner_hash['summary_attributes'] = summary_attributes.select{|sa| sa["ml_num"] == mls_id }
+			inner_hash['detailed_report'] = filtered_detailed_report_attributes.select{|ra| ra["MLS#:"] == mls_id}
+			inner_hash['images'] = images[mls_id]
+			inner_hash['print_date'] = print_date
+			hash[mls_id] = inner_hash
+		}
+		hash
 	end
 
 	def extract_detailed_attributes(property_form)
@@ -124,10 +146,15 @@ debugger
 		images_links
 	end
 
-	def extract_mls_id_from_image_url(url)		
+	def extract_mls_id_from_image_url(url)
+		begin
+			return nil if PHOTO_NOT_EXIST == url
 			end_index 	= url.index('.jpg') - 1 rescue nil
 			start_index = end_index - 7
 			mls_id 			= url[start_index..end_index]
+		end
+		rescue
+			puts "extract_mls_id_from_image_url Failed, URL #{url}"
 	end
 
 	def extract_summary_attributes(summary_form)		

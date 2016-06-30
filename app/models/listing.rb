@@ -28,6 +28,4 @@ class Listing < ActiveRecord::Base
 	def extract_data
 		NewListingParser.new.parse(to_html)
 	end
-
-
 end
