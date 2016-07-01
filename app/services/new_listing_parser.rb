@@ -24,18 +24,13 @@ class NewListingParser
 		html.css('tbody tr').each do |link| 
 			general_summaries << link
 		end
-		
-		# get entire entry data NEW
-		html.css("div[class='reports view-pm'] div").each do |link| 
-			detailed_reports << link 
-		end
 
-		# get entire entry data History
-		if detailed_reports.blank?
-			html.css("div[class='reports view-clf'] div").each do |link| 
-				detailed_reports << link 
-			end
-		end
+		# temporary for tests
+		general_summaries.each{ |summary|			
+			mls_id = extract_summary_attributes(summary)['ml_num']
+			search_str = "div#"
+			detailed_reports << html.css("#{search_str}#{mls_id}")
+		}
 
 		print_date = extract_print_date(html)		
 
@@ -89,7 +84,7 @@ private
 			detailed_report_attributes.push(parsed_detailes) unless parsed_detailes.blank?
 		}
 
-		filtered_detailed_report_attributes = detailed_report_attributes.uniq{|a| a["MLS#:"] && a["MLS#:"].present?}.compact
+		# extract images links 
 		images = extract_images_urls(raw_images_links)
 
 		# build unique listings
@@ -99,7 +94,7 @@ private
 		mls_ids.each{|mls_id|
 			inner_hash = {}
 			inner_hash['summary_attributes'] = summary_attributes.select{|sa| sa["ml_num"] == mls_id }
-			inner_hash['detailed_report'] = filtered_detailed_report_attributes.select{|ra| ra["MLS#:"] == mls_id}
+			inner_hash['detailed_report'] = detailed_report_attributes.select{|ra| ra["MLS#:"] == mls_id}
 			inner_hash['images'] = images[mls_id]
 			inner_hash['print_date'] = print_date
 			hash[mls_id] = inner_hash

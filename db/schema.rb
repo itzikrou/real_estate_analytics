@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160630010733) do
+ActiveRecord::Schema.define(version: 20160701160341) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,55 @@ ActiveRecord::Schema.define(version: 20160630010733) do
     t.boolean  "exported",   default: false
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+  end
+
+  create_table "properties", force: :cascade do |t|
+    t.string   "mls_id"
+    t.string   "for"
+    t.string   "address"
+    t.string   "street_name"
+    t.string   "street_number"
+    t.float    "longtitude"
+    t.float    "latitude"
+    t.string   "listing_status"
+    t.string   "municipality"
+    t.string   "home_type"
+    t.string   "home_style"
+    t.string   "apt_unit"
+    t.integer  "bedrooms"
+    t.integer  "washrooms"
+    t.integer  "kitchens"
+    t.integer  "sqft_from"
+    t.integer  "sqft_to"
+    t.string   "basement"
+    t.string   "fronting_on"
+    t.integer  "family_rooms"
+    t.string   "heat_type"
+    t.string   "air_conditioner"
+    t.string   "exterior"
+    t.string   "drive"
+    t.string   "garage"
+    t.integer  "parking_spaces"
+    t.string   "water"
+    t.string   "sewer"
+    t.float    "lot_length"
+    t.float    "lot_width"
+    t.integer  "rooms"
+    t.string   "pool"
+    t.string   "cross_streets"
+    t.string   "last_status"
+    t.integer  "list_price"
+    t.integer  "leased_price"
+    t.integer  "sale_price"
+    t.string   "postal"
+    t.string   "listing_type"
+    t.integer  "dom"
+    t.integer  "taxes"
+    t.text     "client_remarks"
+    t.jsonb    "images_links"
+    t.datetime "print_date"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end
