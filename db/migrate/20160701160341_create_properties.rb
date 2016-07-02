@@ -29,6 +29,7 @@ class CreateProperties < ActiveRecord::Migration
       t.integer :parking_spaces
       t.string  :water
       t.string  :sewer
+      t.string  :lot
       t.float   :lot_length
       t.float   :lot_width
       t.integer :rooms
@@ -38,6 +39,8 @@ class CreateProperties < ActiveRecord::Migration
       t.integer :list_price
       t.integer :leased_price
       t.integer :sale_price
+      t.datetime :leased_date
+      t.datetime :sold_date
       t.string  :postal
       t.string  :listing_type
       t.integer :dom

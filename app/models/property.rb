@@ -52,4 +52,5 @@
 #
 
 class Property < ActiveRecord::Base
+  validates :mls_id, uniqueness: true
 end
