@@ -40,7 +40,7 @@ class Page < ActiveRecord::Base
   end
 
   def export_all_to_files(path)
-    Page.all.each{|p| p.write_to_file("c:\\pages\\#{i+1}.txt") ; i = i+1}
+    Page.all.each{|p| p.write_to_file("#{path}\\#{i+1}.txt") ; i = i+1}
   end
 
 end

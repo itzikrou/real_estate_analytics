@@ -11,12 +11,12 @@ class ListingDataAdapterService
       detailed_report = @info[1]['detailed_report'][0]
       images_links    = @info[1]['images']
       print_date      = @info[1]['print_date']
-debugger
+
       @property =  Property.find_or_create_by(mls_id: mls_id)
-      @property.mls_id = mls_id
       
       # Summary data
-      @property.address = summary_info['addr']
+      @property.mls_id = mls_id
+      @property.address       = summary_info['addr']
       @property.street_name   = parse_address(summary_info['addr'])[:street_name]
       @property.street_number = parse_address(summary_info['addr'])[:street_number]
       @property.longtitude    = summary_info['latitude'].to_f rescue nil
@@ -24,6 +24,7 @@ debugger
       @property.municipality  = summary_info['municipality']
       @property.home_type     = summary_info['type_own1_out']
       @property.home_style    = summary_info['style']
+      @property.postal        = summary_info['zip']
 
       # Report data
       @property.for = detailed_report['For:']
@@ -58,8 +59,7 @@ debugger
       # @property.list_price = detailed_report['Basement:']
       # @property.leased_price = detailed_report['Basement:']
       # @property.sale_price  = detailed_report['Basement:']
-      @property.postal = summary_info['zip']
-      @property.listing_type = detailed_report['Basement:']
+      # @property.listing_type = detailed_report['Basement:']
       @property.dom   = detailed_report['DOM:']
       @property.taxes = detailed_report['Basement:']
       @property.client_remarks = detailed_report['Client Remks']
@@ -89,6 +89,11 @@ debugger
     street_name   = address_str[white_space_index..address_str.size].strip
     street_number = address_str[0..white_space_index-1].strip
     hash = {street_name: street_name, street_number: street_number}
+  end
+
+  def parse_taxes(taxes_str)
+    return nil if taxes_str.blank?
+    taxes_str[1..taxes_str.size].to_f
   end
 
 

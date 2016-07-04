@@ -1,0 +1,22 @@
+  <h3><%= link_to '<< Back', controller: 'entries', action: 'index' %> </h3>
+
+
+
+<h1>Listing properties</h1>
+<table>
+<!--   <tr>
+    <th>mls_id</th>
+    <th>address</th>
+    <th>municipality</th>
+    <th>postal</th>
+    <th>list_price</th>
+    <th>Status</th>
+    <th>Listing Date</th>
+    <th>Taxes</th>
+    <th>Client Remarks</th>
+  </tr> -->
+
+  <tr>MLS_ID: <%= @properties.mls_id %></tr>
+  <br>
+  <tr>Address: <%= @properties.address %></tr>
+  </table>

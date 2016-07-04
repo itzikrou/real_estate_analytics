@@ -1,0 +1,24 @@
+<h3><%= link_to '<< Back', controller: 'welcome' %> </h3>
+
+<%= search_form_for @q do |f| %>
+  <br>
+  <%= f.label :address_cont %>
+  <%= f.search_field :address_cont %>
+  <%= f.submit %>
+<% end %>
+
+<h1>Listing properties</h1>
+<table>
+  <tr>
+    <th>mls_id</th>
+  </tr>
+ 
+  <% @res.each do |property| %>  
+    <tr>
+      <td><%= property.mls_id %></td>
+      <td><%= link_to 'Show', controller: 'properties', action: 'show', id: property.id %><td>
+      <td><%= link_to 'Edit', controller: 'properties' %><td>
+      <td><%= link_to 'Delete', controller: 'properties' %><td>
+    </tr>
+  <% end %>
+</table>
