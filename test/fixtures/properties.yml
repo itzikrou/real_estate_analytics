@@ -31,6 +31,7 @@
 #  parking_spaces  :integer
 #  water           :string
 #  sewer           :string
+#  lot             :string
 #  lot_length      :float
 #  lot_width       :float
 #  rooms           :integer
@@ -40,6 +41,8 @@
 #  list_price      :integer
 #  leased_price    :integer
 #  sale_price      :integer
+#  leased_date     :datetime
+#  sold_date       :datetime
 #  postal          :string
 #  listing_type    :string
 #  dom             :integer
@@ -49,6 +52,7 @@
 #  print_date      :datetime
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  extras          :string
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

@@ -49,7 +49,7 @@ class ListingDataAdapterService
       @property.water = detailed_report['Water:']
       @property.sewer = detailed_report['Sewers:']
       @property.lot   = detailed_report['Lot:']
-      parse_lot(detailed_report['Lot:'])
+      # parse_lot(detailed_report['Lot:'])
       @property.lot_length  = parse_lot(detailed_report['Lot:'])[:length] rescue nil
       @property.lot_width   = parse_lot(detailed_report['Lot:'])[:width] rescue nil
       @property.rooms = detailed_report['Rms:'].to_i rescue nil
@@ -63,6 +63,8 @@ class ListingDataAdapterService
       @property.dom   = detailed_report['DOM:']
       @property.taxes = detailed_report['Basement:']
       @property.client_remarks = detailed_report['Client Remks']
+      @property.extras = detailed_report['Extras:']
+
       #@property.extras = nil
       @property.images_links = images_links
       @property.print_date = parse_date(print_date) rescue nil
