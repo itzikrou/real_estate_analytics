@@ -12,13 +12,16 @@
 
 class Page < ActiveRecord::Base
 
+  # validations
   validates :url, uniqueness: true
+
+  # callbacks
   before_create :scrape_html_data
   after_save :extract_data
 
-  def to_xml
-    info_doc = Nokogiri::XML(self.html)
-  end
+  # def to_xml
+  #   info_doc = Nokogiri::XML(self.html)
+  # end
 
   def to_html
     info_doc = Nokogiri::HTML(self.html)
@@ -28,15 +31,15 @@ class Page < ActiveRecord::Base
     File.open(full_path, 'w') { |file| file.write(self.html) }
   end
 
-  def extract_data    
-    entries = NewListingParser.new.parse(to_html)    
-    entries.each{|entry|         
+  def extract_data
+    entries = NewListingParser.new.parse(to_html)
+    entries.each{|entry|
       ListingDataAdapterService.new(entry).create_listing
-    }
+    }    
   end
 
-  def scrape_html_data    
-    self.html = NewListingParser.new.scrape_url(self.url)    
+  def scrape_html_data_from_url
+    self.html = NewListingParser.new.scrape_url(self.url)
   end
 
   def export_all_to_files(path)

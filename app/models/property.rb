@@ -56,5 +56,31 @@
 #
 
 class Property < ActiveRecord::Base
+
+  # validations
   validates :mls_id, uniqueness: true
+
+  # scopes
+  scope :sold, -> {
+    where.not(sold_date: nil)
+  }
+
+  scope :rented, -> {
+    where.not(leased_date: nil)
+  }
+
+  def calculate_expected_return_rate
+    # same street, municipality, texas, sale_price, leased_price
+    rented = Property.where(municipality: self.municipality)
+                      .where(street_name: self.street_name)
+    sold = Property.where(municipality: self.municipality)
+                    .where(street_name: self.street_name)
+  end
+
+  def calculate_score
+
+  end
+
+
+
 end
