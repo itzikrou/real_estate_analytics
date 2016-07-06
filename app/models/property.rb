@@ -64,6 +64,8 @@
 #
 
 class Property < ActiveRecord::Base
+
+  # validations
   validates :mls_id, uniqueness: true
 
   # scopes
@@ -86,7 +88,6 @@ class Property < ActiveRecord::Base
   def calculate_score
 
   end
-
 
   def compareables
     Property.where(street_name: self.street_name)

@@ -1,6 +1,6 @@
 class PropertiesController < ApplicationController
 
-  def index   
+  def index
     @q = Property.ransack(params[:q])
     @properties = @q.result(distinct: true)
     @properties.order(print_date: :desc, street_name: :desc)
@@ -15,5 +15,8 @@ class PropertiesController < ApplicationController
     @properties = Property.find(params[:id]).compareables
   end
 
+  def show
+    @properties = Property.find(params[:id])
+  end
 
 end
