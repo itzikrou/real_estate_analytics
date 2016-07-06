@@ -2,8 +2,8 @@
 
 <%= search_form_for @q do |f| %>
   <br>
-  <%= f.label :address_cont %>
-  <%= f.search_field :address_cont %>
+  <%= f.label :address_or_municipality_or_postal_cont %>
+  <%= f.search_field :address_or_municipality_or_postal_cont %>
   <%= f.submit %>
 <% end %>
 
@@ -11,11 +11,22 @@
 <table>
   <tr>
     <th>mls_id</th>
+    <th><%= sort_link(@q, :postal) %></th>
+    <th><%= sort_link(@q, :address) %></th>
+    <th><%= sort_link(@q, :municipality) %></th>
+    <th><%= sort_link(@q, :bedrooms) %></th>
+    <th><%= sort_link(@q, :washrooms) %></th>
+
   </tr>
  
   <% @res.each do |property| %>  
     <tr>
       <td><%= property.mls_id %></td>
+      <td><%= property.postal %></td>
+      <td><%= property.address %></td>
+      <td><%= property.municipality %></td>
+      <td><%= property.bedrooms %></td>
+      <td><%= property.washrooms %></td>
       <td><%= link_to 'Show', controller: 'properties', action: 'show', id: property.id %><td>
       <td><%= link_to 'Edit', controller: 'properties' %><td>
       <td><%= link_to 'Delete', controller: 'properties' %><td>

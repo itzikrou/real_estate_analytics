@@ -21,6 +21,12 @@ Rails.application.routes.draw do
 
     resources :properties
 
+    resources :properties do
+      collection do
+        get 'compareables'
+      end
+    end
+
   # Example resource route with options:
   #   resources :products do
   #     member do
