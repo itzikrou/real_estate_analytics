@@ -7,3 +7,6 @@
 # GMAIL_USERNAME: 'Your_Gmail_Username'
 # makes 'Your_Gmail_Username' available as ENV["GMAIL_USERNAME"]
 GMAIL_USERNAME: 'Your_Gmail_Username'
+DATABASE_NAME: 'mls_app_development'
+DB_USER: 'asus'
+DB_PASS: 'home_user'

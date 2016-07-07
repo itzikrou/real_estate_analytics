@@ -27,67 +27,73 @@ class ListingDataAdapterService
       @property.home_style    = summary_info['style'] rescue nil
       @property.postal        = parse_zipcode(summary_info['zip']) rescue nil
 
-      # List + For
-      # Lease + For
-      
-      # Leased + List
-      # Sold + List
+      if detailed_report.blank?
+        @property.listing_status  = summary_info['lsc'] rescue nil
+        @property.bedrooms    = summary_info['br'].to_i rescue nil
+        @property.washrooms   = summary_info['bath_tot'].to_i rescue nil
+        
+        if @property.listing_status == 'New'
+            @property.list_price = summary_info['lp_dol'].to_i rescue nil
+        elsif @property.listing_status == 'Sld'
+            @property.sale_price = summary_info['lp_dol'].to_i rescue nil
+        elsif  @property.listing_status == 'Lsd'
+            @property.leased_price = summary_info['lp_dol'].to_i rescue nil
+        end
+      end
 
-      # Apx Age : 51-99
-      # Apx Sqft: 2000-2500
+      if detailed_report.present?
+        # Report data
+        @property.for = detailed_report['For:'] rescue nil
+        @property.listing_status  = detailed_report['Last Status:'] rescue nil
+        @property.leased_date     = parse_date(detailed_report['Leased Date:']) rescue nil
+        @property.sold_date = parse_date(detailed_report['Sold Date:']) rescue nil
+        @property.apt_unit  = nil
 
-      # Report data
-      @property.for = detailed_report['For:'] rescue nil
-      @property.listing_status  = detailed_report['Last Status:'] rescue nil
-      @property.leased_date     = parse_date(detailed_report['Leased Date:']) rescue nil
-      @property.sold_date = parse_date(detailed_report['Sold Date:']) rescue nil
-      @property.apt_unit  = nil
+        @property.bedrooms  = parse_bedrooms(detailed_report['Bedrooms:'])[:main].to_i rescue nil
+        @property.washrooms = parse_washrooms(detailed_report['Washrooms:'])[:main].to_i rescue nil
+        @property.basement_bedrooms  = parse_bedrooms(detailed_report['Bedrooms:'])[:basement].to_i rescue nil
+        @property.basement_washrooms = parse_washrooms(detailed_report['Washrooms:'])[:basement].to_i rescue nil
 
-      @property.bedrooms  = parse_bedrooms(detailed_report['Bedrooms:'])[:main].to_i rescue nil
-      @property.washrooms = parse_washrooms(detailed_report['Washrooms:'])[:main].to_i rescue nil
-      @property.basement_bedrooms  = parse_bedrooms(detailed_report['Bedrooms:'])[:basement].to_i rescue nil
-      @property.basement_washrooms = parse_washrooms(detailed_report['Washrooms:'])[:basement].to_i rescue nil
+        @property.kitchens  = parse_kitchens(detailed_report['Kitchens:'])[:main].to_i rescue nil
+        @property.basement_kitchens  = parse_kitchens(detailed_report['Kitchens:'])[:basement].to_i rescue nil
 
-      @property.kitchens  = parse_kitchens(detailed_report['Kitchens:'])[:main].to_i rescue nil
-      @property.basement_kitchens  = parse_kitchens(detailed_report['Kitchens:'])[:basement].to_i rescue nil
+        @property.total_rooms  = parse_total_rooms(detailed_report['Rms:'])[:main].to_i rescue nil
+        @property.basement_rooms  = parse_total_rooms(detailed_report['Rms:'])[:basement].to_i rescue nil
 
-      @property.total_rooms  = parse_total_rooms(detailed_report['Rms:'])[:main].to_i rescue nil
-      @property.basement_rooms  = parse_total_rooms(detailed_report['Rms:'])[:basement].to_i rescue nil
+        @property.sqft_from = nil
+        @property.sqft_to   = nil
+        @property.basement  = detailed_report['Basement:'] rescue nil
+        @property.fronting_on     = detailed_report['Fronting On:'] rescue nil
+        @property.family_rooms    = detailed_report['Fam Rm:'].to_i rescue nil
+        @property.heat_type       = detailed_report['Heat:'] rescue nil
+        @property.air_conditioner = detailed_report['A/C:'] rescue nil
+        @property.exterior  = detailed_report['Exterior:'] rescue nil
+        @property.drive     = detailed_report['Drive:'] rescue nil
+        @property.garage    = detailed_report['Garage:'] rescue nil
+        @property.parking_spaces = detailed_report['Park Spcs:'].to_i rescue nil
+        @property.water = detailed_report['Water:'] rescue nil
+        @property.sewer = detailed_report['Sewers:'] rescue nil
+        @property.lot   = detailed_report['Lot:'] rescue nil
+        @property.apx_age   = detailed_report['Apx Age:'] rescue nil
+        @property.apx_sqft  = detailed_report['Apx Sqft:'] rescue nil
+        @property.lot_length  = parse_lot(detailed_report['Lot:'])[:length] rescue nil
+        @property.lot_width   = parse_lot(detailed_report['Lot:'])[:width] rescue nil
+        @property.rooms = detailed_report['Rms:'].to_i rescue nil
+        @property.pool  = detailed_report['Pool:'] rescue nil
+        @property.cross_streets = detailed_report['Dir/Cross St:'] rescue nil
+        @property.last_status   = detailed_report['Last Status:'] rescue nil
+        @property.list_price    = detailed_report['List:'].to_i rescue nil
+        @property.leased_price  = detailed_report['Leased:'].to_i rescue nil
+        # @property.listing_type = detailed_report['Basement:']
 
-
-      @property.sqft_from = nil
-      @property.sqft_to   = nil
-      @property.basement  = detailed_report['Basement:'] rescue nil
-      @property.fronting_on     = detailed_report['Fronting On:'] rescue nil
-      @property.family_rooms    = detailed_report['Fam Rm:'].to_i rescue nil
-      @property.heat_type       = detailed_report['Heat:'] rescue nil
-      @property.air_conditioner = detailed_report['A/C:'] rescue nil
-      @property.exterior  = detailed_report['Exterior:'] rescue nil
-      @property.drive     = detailed_report['Drive:'] rescue nil
-      @property.garage    = detailed_report['Garage:'] rescue nil
-      @property.parking_spaces = detailed_report['Park Spcs:'].to_i rescue nil
-      @property.water = detailed_report['Water:'] rescue nil
-      @property.sewer = detailed_report['Sewers:'] rescue nil
-      @property.lot   = detailed_report['Lot:'] rescue nil
-      @property.apx_age   = detailed_report['Apx Age:'] rescue nil
-      @property.apx_sqft  = detailed_report['Apx Sqft:'] rescue nil
-      @property.lot_length  = parse_lot(detailed_report['Lot:'])[:length] rescue nil
-      @property.lot_width   = parse_lot(detailed_report['Lot:'])[:width] rescue nil
-      @property.rooms = detailed_report['Rms:'].to_i rescue nil
-      @property.pool  = detailed_report['Pool:'] rescue nil
-      @property.cross_streets = detailed_report['Dir/Cross St:'] rescue nil
-      @property.last_status   = detailed_report['Last Status:'] rescue nil
-      @property.list_price    = detailed_report['List:'] rescue nil
-      @property.leased_price  = detailed_report['Leased:'] rescue nil
-      # @property.listing_type = detailed_report['Basement:']
-
-      @property.sale_price  = detailed_report['Sold:'] rescue nil
-      @property.dom   = detailed_report['DOM:'] rescue nil
-      @property.taxes = parse_taxes(detailed_report['Taxes:']).to_f rescue nil
-      @property.client_remarks = detailed_report['Client Remks'] rescue nil
-      @property.extras = detailed_report['Extras:'] rescue nil
-      @property.images_links = images_links rescue nil
-      @property.print_date = parse_date(print_date) rescue nil
+        @property.sale_price  = detailed_report['Sold:'].to_i rescue nil
+        @property.dom   = detailed_report['DOM:'] rescue nil
+        @property.taxes = parse_taxes(detailed_report['Taxes:']).to_f rescue nil
+        @property.client_remarks = detailed_report['Client Remks'] rescue nil
+        @property.extras = detailed_report['Extras:'] rescue nil
+        @property.images_links = images_links rescue nil
+        @property.print_date = parse_date(print_date) rescue nil
+      end
 
     rescue => e
       puts "parser::=> exception #{e.class.name} : #{e.message}"
@@ -146,7 +152,8 @@ class ListingDataAdapterService
     hash = {main: arr[0].to_i, basement: arr[2]}   
   end
 
-
+  # Apx Age : 51-99
+  # Apx Sqft: 2000-2500
   def parse_sqft
   end
 

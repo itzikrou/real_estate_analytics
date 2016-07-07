@@ -8,11 +8,11 @@ class PropertiesController < ApplicationController
   end
  
   # def show    
-  #   @properties = Property.find(params[:id])
+  #   @properties = Propert.find(params[:id])
   # end
 
   def show    
-    @properties = Property.find(params[:id]).compareables
+    @properties = Property.find(params[:id])
   end
 
   def show
