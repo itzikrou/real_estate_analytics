@@ -11,22 +11,30 @@
 <table>
   <tr>
     <th>mls_id</th>
+    <th><%= sort_link(@q, :print_date) %></th>
     <th><%= sort_link(@q, :postal) %></th>
     <th><%= sort_link(@q, :address) %></th>
     <th><%= sort_link(@q, :municipality) %></th>
     <th><%= sort_link(@q, :bedrooms) %></th>
     <th><%= sort_link(@q, :washrooms) %></th>
+    <th><%= sort_link(@q, :home_style) %></th>
+    <th><%= sort_link(@q, :taxes) %></th>
+    <th><%= sort_link(@q, :lot) %></th>
 
   </tr>
  
   <% @res.each do |property| %>  
     <tr>
       <td><%= property.mls_id %></td>
+      <td><%= property.print_date %></td>
       <td><%= property.postal %></td>
       <td><%= property.address %></td>
       <td><%= property.municipality %></td>
       <td><%= property.bedrooms %></td>
       <td><%= property.washrooms %></td>
+      <td><%= property.home_style %></td>
+      <td><%= property.taxes %></td>
+      <td><%= property.lot %></td>
       <td><%= link_to 'Show', controller: 'properties', action: 'show', id: property.id %><td>
       <td><%= link_to 'Edit', controller: 'properties' %><td>
       <td><%= link_to 'Delete', controller: 'properties' %><td>
