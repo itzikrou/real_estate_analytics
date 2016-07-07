@@ -16,7 +16,7 @@ class Page < ActiveRecord::Base
   validates :url, uniqueness: true
 
   # callbacks
-  before_create :scrape_html_data
+  before_create :scrape_html_data_from_url
   after_save :extract_data
 
   # def to_xml
