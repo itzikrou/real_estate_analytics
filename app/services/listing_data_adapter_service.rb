@@ -82,11 +82,11 @@ class ListingDataAdapterService
         @property.pool  = detailed_report['Pool:'] rescue nil
         @property.cross_streets = detailed_report['Dir/Cross St:'] rescue nil
         @property.last_status   = detailed_report['Last Status:'] rescue nil
-        @property.list_price    = detailed_report['List:'].to_i rescue nil
-        @property.leased_price  = detailed_report['Leased:'].to_i rescue nil
+        @property.list_price    = parse_price(detailed_report['List:']).to_i rescue nil
+        @property.leased_price  = parse_price(detailed_report['Leased:']).to_i rescue nil
         # @property.listing_type = detailed_report['Basement:']
 
-        @property.sale_price  = detailed_report['Sold:'].to_i rescue nil
+        @property.sale_price  = parse_price(detailed_report['Sold:']).to_i rescue nil
         @property.dom   = detailed_report['DOM:'] rescue nil
         @property.taxes = parse_taxes(detailed_report['Taxes:']).to_f rescue nil
         @property.client_remarks = detailed_report['Client Remks'] rescue nil
@@ -123,6 +123,14 @@ class ListingDataAdapterService
   def parse_taxes(taxes_str)
     return nil if taxes_str.blank?    
     arr = taxes_str.split(' ')    
+    arr[0].slice!('$')
+    arr[0].slice!(',')
+    arr[0]
+  end
+
+    def parse_price(price_str)
+    return nil if price_str.blank?    
+    arr = price_str.split(' ')    
     arr[0].slice!('$')
     arr[0].slice!(',')
     arr[0]
