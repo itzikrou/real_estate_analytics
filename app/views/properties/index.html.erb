@@ -28,6 +28,7 @@
     <th><%= sort_link(@q, :sale_price) %></th>
     <!-- <th><%= sort_link(@q, :leased_date) %></th> -->
     <th><%= sort_link(@q, :leased_price) %></th>
+    <th><%= sort_link(@q, :expected_return_rate) %></th>
     <!-- <th><%= sort_link(@q, :sold_date) %></th> -->
     <!-- <th><%= sort_link(@q, :total_rooms) %></th> -->
     <!-- <th><%= sort_link(@q, :basement_rooms) %></th> -->
@@ -53,12 +54,13 @@
       <td><%= property.sale_price %></td>
       <!-- <td><%= property.leased_date %></td> -->
       <td><%= property.leased_price %></td>
+      <td><%= '%.3f' % (100*property.expected_return_rate) rescue nil %></td>
       <!-- <td><%= property.sold_date %></td> -->
       <!-- <td><%= property.total_rooms %></td> -->
       <!-- <td><%= property.basement_rooms %></td> -->
       <td><%= link_to 'Show', controller: 'properties', action: 'show', id: property.id %><td>
-      <td><%= link_to 'Edit', controller: 'properties' %><td>
-      <td><%= link_to 'Delete', controller: 'properties' %><td>
+      <!-- <td><%= link_to 'Edit', controller: 'properties' %><td> -->
+      <!-- <td><%= link_to 'Delete', controller: 'properties' %><td> -->
     </tr>
   <% end %>
 </table>
