@@ -83,7 +83,7 @@ class ListingDataAdapterService
         @property.cross_streets = detailed_report['Dir/Cross St:'] rescue nil
         @property.last_status   = detailed_report['Last Status:'] rescue nil
         @property.list_price    = parse_price(detailed_report['List:']).to_i rescue nil
-        @property.leased_price  = parse_price(detailed_report['Leased:']).to_i rescue nil
+        @property.leased_price  = parse_price(detailed_report['List:']).to_i rescue nil
         # @property.listing_type = detailed_report['Basement:']
 
         @property.sale_price  = parse_price(detailed_report['Sold:']).to_i rescue nil

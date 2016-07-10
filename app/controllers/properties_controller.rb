@@ -1,6 +1,6 @@
 class PropertiesController < ApplicationController
 
-  def index
+  def index    
     @q = Property.ransack(params[:q])
     # @properties = @q.result(distinct: true)
     # @properties.order(print_date: :desc)

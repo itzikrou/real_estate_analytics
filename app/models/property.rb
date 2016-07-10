@@ -99,7 +99,12 @@ class Property < ActiveRecord::Base
     if rented_avarage == 0 || rented_avarage.blank?
       return
     end    
-    self.expected_return_rate = ( (rented_avarage * 12) / transaction_price ) rescue nil  
+    calc_return_rate = ( (rented_avarage * 12) / transaction_price ) rescue nil
+    if calc_return_rate < 0.09 && calc_return_rate > 0
+      self.expected_return_rate = calc_return_rate
+    else
+      self.expected_return_rate = nil
+    end
   end
 
   def calculate_score

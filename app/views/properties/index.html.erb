@@ -1,9 +1,24 @@
 <h3><%= link_to '<< Back', controller: 'welcome' %> </h3>
 
+<h3>Listings in database: <%=@properties.count%></h3>
 <%= search_form_for @q do |f| %>
   <br>
   <%= f.label :street_name_or_address_or_municipality_or_postal_cont %>
   <%= f.search_field :street_name_or_address_or_municipality_or_postal_cont %>
+  <%= f.submit %>
+<% end %>
+
+<%= search_form_for @q do |f| %>
+  <br>
+  <%= f.label :expected_return_rate_gt %>
+  <%= f.search_field :expected_return_rate_gt %> (0.05)
+  <%= f.submit %>
+<% end %>
+
+<%= search_form_for @q do |f| %>
+  <br>
+  <%= f.label :basement_cont %>
+  <%= f.search_field :basement_cont %>
   <%= f.submit %>
 <% end %>
 
