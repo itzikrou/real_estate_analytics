@@ -21,12 +21,12 @@ default: &default
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
 
-# development:
-#   <<: *default
-#   database: mls_app_development
-#   pool: 5
-#   username: asus
-#   password: home_user
+development:
+  <<: *default
+  database: mls_app_development
+  pool: 5
+  username: asus
+  password: home_user
 
 
   # The specified database role being used to connect to postgres.
@@ -82,13 +82,13 @@ default: &default
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-development:
-    adapter: postgresql
-    encoding: utf8
-    database: d8pgdo1noqicq6
-    username: wznigtfvpzndtd
-    password: Z1C52QpsdS2ZjQJ8bdCYiWkZ5M
-    host: ec2-54-225-101-191.compute-1.amazonaws.com
-    port: 5432
-    sslmode: require
+# development:
+#     adapter: postgresql
+#     encoding: utf8
+#     database: d8pgdo1noqicq6
+#     username: wznigtfvpzndtd
+#     password: Z1C52QpsdS2ZjQJ8bdCYiWkZ5M
+#     host: ec2-54-225-101-191.compute-1.amazonaws.com
+#     port: 5432
+#     sslmode: require
 
