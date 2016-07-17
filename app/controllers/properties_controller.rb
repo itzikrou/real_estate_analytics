@@ -9,13 +9,6 @@ class PropertiesController < ApplicationController
     # render json: {properties: @properties}
   end
 
-
-  # @rooms = @search.result.paginate(page: params[:page], per_page: params[:per_page])
- 
-  # def show    
-  #   @properties = Propert.find(params[:id])
-  # end
-
   def show
     @properties = Property.find(params[:id])
   end

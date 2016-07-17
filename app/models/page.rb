@@ -42,7 +42,7 @@ class Page < ActiveRecord::Base
     self.html = NewListingParser.new.scrape_url(self.url)
   end
 
-  def export_all_to_files(path)
+  def self.export_all_to_files(path)
     i = 0
     Page.all.each{|p| p.write_to_file("#{path}\\#{i+1}.txt") ; i = i+1}
   end

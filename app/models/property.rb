@@ -69,6 +69,22 @@ class Property < ActiveRecord::Base
   # validations
   validates :mls_id, uniqueness: true
 
+
+  # reverse_geocoded_by :latitude, :longitude, :address => :location
+
+  # reverse_geocoded_by :latitude, :longitude
+
+  reverse_geocoded_by :latitude, :longitude do |obj,results|
+debugger    
+    if geo = results.first
+      obj.city    = geo.city
+      obj.zipcode = geo.postal_code
+      obj.country = geo.country_code
+    end
+  end
+
+  after_validation :reverse_geocode  # auto-fetch address
+
   before_save :calculate_expected_return_rate
 
   # scopes
@@ -107,8 +123,11 @@ class Property < ActiveRecord::Base
     end
   end
 
-  def calculate_score
-
+  def fetch_realtor
+    body = HttpAdapter.body(longitude, longitude+10, latitude, latitude+10)
+ debugger   
+    res = HttpAdapter.post(body)
+debugger    
   end
 
   def compareables
