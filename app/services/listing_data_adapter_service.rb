@@ -20,8 +20,8 @@ class ListingDataAdapterService
       @property.address       = summary_info['addr'] rescue nil
       @property.street_name   = parse_address(summary_info['addr'])[:street_name] rescue nil
       @property.street_number = parse_address(summary_info['addr'])[:street_number] rescue nil
-      @property.longitude    = summary_info['latitude'].to_f rescue nil
-      @property.latitude      = summary_info['longitude'].to_f rescue nil
+      @property.longitude    = summary_info['longitude'].to_f rescue nil
+      @property.latitude      = summary_info['latitude'].to_f rescue nil
       @property.municipality  = summary_info['municipality'] rescue nil
       @property.home_type     = summary_info['type_own1_out'] rescue nil
       @property.home_style    = summary_info['style'] rescue nil

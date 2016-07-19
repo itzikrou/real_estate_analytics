@@ -14,13 +14,10 @@ class RealtorEntry < ActiveRecord::Base
   validates :mls_id, uniqueness: true
 
   def self.extract_realtor
-    Property.all.each{|prop|
-debugger      
-      body = HttpAdapter.body(prop.longitude, prop.longitude+0.2, prop.latitude, prop.latitude+0.2)
+    Property.all.each{|prop|      
+      body = HttpAdapter.body(prop.longitude, prop.longitude+0.05, prop.latitude, prop.latitude+0.05)   
       puts "PropID: #{prop.id}, coords: #{prop.longitude}, #{prop.latitude}"
       results = HttpAdapter.post(body)
-      puts "Num of results: #{results['Results'].count}"
-      puts "Num Of Entries: #{RealtorEntry.count}"
       results['Results'].each{|result|
         puts " This is the MLS number #{result['MlsNumber']}"
         RealtorEntry.create(mls_id: result['MlsNumber'], data: result)
