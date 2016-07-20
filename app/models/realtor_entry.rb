@@ -18,10 +18,12 @@ class RealtorEntry < ActiveRecord::Base
       body = HttpAdapter.body(prop.longitude, prop.longitude+0.05, prop.latitude, prop.latitude+0.05)   
       puts "PropID: #{prop.id}, coords: #{prop.longitude}, #{prop.latitude}"
       results = HttpAdapter.post(body)
-      results['Results'].each{|result|
-        puts " This is the MLS number #{result['MlsNumber']}"
-        RealtorEntry.create(mls_id: result['MlsNumber'], data: result)
-      }
+      if results['Results'].present?
+        results['Results'].each{|result|
+          puts " This is the MLS number #{result['MlsNumber']}"
+          RealtorEntry.create(mls_id: result['MlsNumber'], data: result)
+        }
+      end
     }    
   end
 end
