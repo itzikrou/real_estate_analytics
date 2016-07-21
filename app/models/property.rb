@@ -121,8 +121,7 @@ class Property < ActiveRecord::Base
 
   def fetch_realtor
     body = HttpAdapter.body(longitude, longitude+10, latitude, latitude+10)
-    res = HttpAdapter.post(body)
-debugger    
+    res = HttpAdapter.post(body)    
   end
 
   def compareables

@@ -1,11 +1,19 @@
 class HttpAdapter
 
-  def self.post(body)
-    HTTParty.post("https://api2.realtor.ca/Listing.svc/PropertySearch_Post",
+  def self.post(body, url)
+    HTTParty.post(url,
               { 
                 :body => body,
                 :headers => { 'Content-Type' => 'application/json' }
                })
+  end
+
+  def self.post(body)
+    HTTParty.post("https://api2.realtor.ca/Listing.svc/PropertySearch_Post",
+            { 
+              :body => body,
+              :headers => { 'Content-Type' => 'application/json' }
+             })
   end
 
   def self.body(longitude_min, longitude_max, latitude_min, latitude_max)

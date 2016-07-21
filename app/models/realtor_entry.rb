@@ -24,6 +24,6 @@ class RealtorEntry < ActiveRecord::Base
           RealtorEntry.create(mls_id: result['MlsNumber'], data: result)
         }
       end
-    }    
+    }
   end
 end

@@ -173,6 +173,4 @@ class ListingDataAdapterService
     zipcode_str.delete(' ')
   end
 
-
-
 end
