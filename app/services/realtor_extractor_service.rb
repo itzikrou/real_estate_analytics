@@ -37,6 +37,7 @@ class RealtorExtractorService
     lat = geo_details.data["geometry"]["location"]["lat"]
     lon = geo_details.data["geometry"]["location"]["lng"]
     while true do
+      puts "Fetch Page Number: #{cur_page}"
       params[:CurrentPage]  = cur_page
       params[:LongitudeMin] = lon - margin
       params[:LongitudeMax] = lon + margin
