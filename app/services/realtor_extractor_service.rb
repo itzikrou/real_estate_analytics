@@ -1,16 +1,16 @@
 class RealtorExtractorService
 
 
-  def fetch_listings
+  def fetch_listings(coords_adjust)
     while true do
       cur_page = 1
       params = req_params
-      coords_adjust = 0.05
+      # coords_adjust = 0.05
 
-      params[:LongitudeMin] = params[:LongitudeMin] + coords_adjust
-      params[:LongitudeMax] = params[:LongitudeMax] - coords_adjust
-      params[:LatitudeMin] = params[:LatitudeMin] + coords_adjust      
-      params[:LatitudeMax] = params[:LatitudeMax] - coords_adjust
+      params[:LongitudeMin] = params[:LongitudeMin] - coords_adjust
+      params[:LongitudeMax] = params[:LongitudeMax] + coords_adjust
+      params[:LatitudeMin] = params[:LatitudeMin] - coords_adjust      
+      params[:LatitudeMax] = params[:LatitudeMax] + coords_adjust
       puts "@@@@@@@ Change Coords @@@@@@@@@@@@"
       while true do
         params[:CurrentPage] = cur_page
