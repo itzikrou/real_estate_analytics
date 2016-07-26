@@ -19,9 +19,6 @@ class Page < ActiveRecord::Base
   before_create :scrape_html_data_from_url
   after_save :extract_data
 
-  # def to_xml
-  #   info_doc = Nokogiri::XML(self.html)
-  # end
 
   def to_html
     info_doc = Nokogiri::HTML(self.html)

@@ -5,7 +5,6 @@ class RealtorExtractorService
     while true do
       cur_page = 1
       params = req_params
-      # coords_adjust = 0.05
 
       params[:LongitudeMin] = params[:LongitudeMin] - coords_adjust
       params[:LongitudeMax] = params[:LongitudeMax] + coords_adjust
@@ -30,12 +29,40 @@ class RealtorExtractorService
   end
 
 
-  def fetch_by_address(address, margin)
+  def fetch_by_address(address, margin = 0.03)    
     cur_page = 1
     params = req_params
     geo_details = Geocoder.search(address).first
     lat = geo_details.data["geometry"]["location"]["lat"]
     lon = geo_details.data["geometry"]["location"]["lng"]
+    while true do
+      puts "Fetch Page Number: #{cur_page}"
+      params[:CurrentPage]  = cur_page
+      params[:LongitudeMin] = lon - margin
+      params[:LongitudeMax] = lon + margin
+      params[:LatitudeMin]  = lat - margin
+      params[:LatitudeMax]  = lat + margin
+      params[:Latitude]  = lat
+      params[:Longitude] = lon
+      
+      body = build_msg_body(params)   
+      results = HttpAdapter.post(body, URL) 
+      if results['Results'].present?
+        results['Results'].each{|result|
+          puts " This is the MLS number #{result['MlsNumber']}"
+          RealtorEntry.create(mls_id: result['MlsNumber'], data: result)
+        }
+        cur_page += 1
+      else       
+        break
+      end
+    end
+    cur_page
+  end
+
+    def fetch_by_geo_location(lat, lon, margin)
+    cur_page = 1
+    params = req_params
     while true do
       puts "Fetch Page Number: #{cur_page}"
       params[:CurrentPage]  = cur_page
@@ -88,19 +115,3 @@ private
   URL = "https://api2.realtor.ca/Listing.svc/PropertySearch_Post"
 
 end
-
-
-# hash = {
-#   CultureId = 1,
-#   ApplicationId = 1,
-#   RecordsPerPage = 9,
-#   MaximumResults = 9,
-#   PropertySearchTypeId = 1,
-#   TransactionTypeId = 1,
-#   PropertyTypeGroupID = 1,
-#   LongitudeMin = -79.200927734375,
-#   LongitudeMax = -78.85966491699219,
-#   LatitudeMin = 43.794797871527976,
-#   LatitudeMax = 43.99124160781591,
-#   CurrentPage = 1
-# }

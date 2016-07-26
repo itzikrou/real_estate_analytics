@@ -1,0 +1,13 @@
+<h2>Index Fetch Entries</h2>
+<h3><%= link_to '<< Back', controller: 'welcome', action: 'index' %> </h3>
+
+<h3><form action="/realtor_entries" method="post">
+  address: <input type="text_field" size="80" name="query_address">
+  <br>
+  margin: <input type="text_field" value="0.03" size="5" name="margin">
+  <br>
+  <input type="submit" value="Insert Address">
+</form>
+</h3>
+
+<p>Number of pages scraped: <%= @num_pages_scraped %></p>

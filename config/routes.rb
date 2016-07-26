@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
     resources :properties
 
+    resources :realtor_entries
+
     resources :properties do
       collection do
         get 'compareables'
