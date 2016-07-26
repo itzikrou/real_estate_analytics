@@ -3,43 +3,49 @@ For Rent
 mls_id
 
 *location*
-address
+address - validation
 postal
-longitude
-latitude
+longitude - validation
+latitude - validation
 
 *inside*
 rooms_total
-num_of_floors
+num_of_stories
 family_rooms
 bedrooms
 washrooms
 kitchens
-
-*basement*
+heat_type
+air_conditioner
+sqft_from
+sqft_to
 basement_type
 basement_rooms
 basement_bedrooms
 basement_washrooms
 basement_kitchens
 
-heat_type
-air_conditioner
-sqft_from
-sqft_to
-
-*outside*
+*building*
 parking_spaces
 garage
 fronting_on
 lot_length
 lot_width
+apx_age
+ammenities
+pool
+water
+sewer
+exterior
+
+*area*
+ammenities_near_by
+cross_streets
 
 *status*
-listing_last_status [leased, active, unknown]
+listing_status [leased, active, unknown]
 leased_date
 dom
-
 
 *price*
 asking_price
@@ -50,3 +56,6 @@ taxes
 image_links: json
 
 *general*
+raw_data: jsonb
+remarks: text
+extras: text
