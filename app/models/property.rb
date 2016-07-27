@@ -133,4 +133,8 @@ class Property < ActiveRecord::Base
     RealtorExtractorService.new.fetch_by_geo_location(self.latitude, self.longitude, 0.03)
   end
 
+  def create_task
+    Resque.enqueue(RealtorWorker, self.id)
+  end
+
 end

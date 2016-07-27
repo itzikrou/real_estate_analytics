@@ -1,3 +1,15 @@
+GIT
+  remote: git://github.com/mattgibson/resque-web.git
+  revision: 90a6a2d6170774b2ec42c1c0ef0e430209646831
+  branch: fix-sprockets-manifest-error
+  specs:
+    resque-web (0.0.6)
+      coffee-rails
+      jquery-rails
+      resque
+      sass-rails
+      twitter-bootstrap-rails
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -49,10 +61,15 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
+    commonjs (0.2.7)
     concurrent-ruby (1.0.2)
     debug_inspector (0.0.2)
     domain_name (0.5.20160310)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (2.1.1)
+    dotenv-rails (2.1.1)
+      dotenv (= 2.1.1)
+      railties (>= 4.0, < 5.1)
     erubis (2.7.0)
     execjs (2.7.0)
     geocoder (1.3.7)
@@ -70,6 +87,13 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
+    less (2.6.0)
+      commonjs (~> 0.2.7)
+    less-rails (2.7.1)
+      actionpack (>= 4.0)
+      less (~> 2.6.0)
+      sprockets (> 2, < 4)
+      tilt
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
@@ -86,6 +110,7 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.9.0)
+    mono_logger (1.1.0)
     multi_json (1.12.1)
     multi_xml (0.5.5)
     net-http-digest_auth (1.4)
@@ -104,6 +129,8 @@ GEM
       activerecord (>= 3.0)
     puma (3.4.0)
     rack (1.6.4)
+    rack-protection (1.5.3)
+      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.6)
@@ -144,6 +171,15 @@ GEM
       polyamorous (~> 1.2)
     rdoc (4.2.2)
       json (~> 1.4)
+    redis (3.3.1)
+    redis-namespace (1.5.2)
+      redis (~> 3.0, >= 3.0.4)
+    resque (1.26.0)
+      mono_logger (~> 1.0)
+      multi_json (~> 1.0)
+      redis-namespace (~> 1.3)
+      sinatra (>= 0.9.2)
+      vegas (~> 0.1.2)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     sass (3.4.22)
@@ -156,6 +192,10 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    sinatra (1.4.7)
+      rack (~> 1.5)
+      rack-protection (~> 1.4)
+      tilt (>= 1.3, < 3)
     sprockets (3.6.0)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -168,6 +208,11 @@ GEM
     tilt (2.0.5)
     turbolinks (2.5.3)
       coffee-rails
+    twitter-bootstrap-rails (3.2.2)
+      actionpack (>= 3.1)
+      execjs (>= 2.2.2, >= 2.2)
+      less-rails (>= 2.5.0)
+      railties (>= 3.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     tzinfo-data (1.2016.4)
@@ -178,6 +223,8 @@ GEM
       unf_ext
     unf_ext (0.0.7.2)
     unf_ext (0.0.7.2-x86-mingw32)
+    vegas (0.1.11)
+      rack (>= 1.0.0)
     web-console (2.3.0)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -198,6 +245,7 @@ DEPENDENCIES
   awesome_print
   byebug
   coffee-rails (~> 4.1.0)
+  dotenv-rails
   geocoder
   httparty
   jbuilder (~> 2.0)
@@ -207,6 +255,9 @@ DEPENDENCIES
   rails (= 4.2.6)
   rails_12factor
   ransack
+  redis (~> 3.2)
+  resque
+  resque-web!
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   turbolinks

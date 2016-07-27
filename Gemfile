@@ -25,6 +25,14 @@ gem 'geocoder'
 
 gem 'httparty'
 
+gem 'redis', '~>3.2'
+
+gem 'resque'
+
+gem 'dotenv-rails'
+
+gem 'resque-web', require: 'resque_web', github: 'mattgibson/resque-web', branch: 'fix-sprockets-manifest-error'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -35,6 +43,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'rails_12factor', group: :production
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
