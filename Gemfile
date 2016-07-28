@@ -29,6 +29,8 @@ gem 'redis', '~>3.2'
 
 gem 'resque'
 
+gem 'gmail'
+
 gem 'dotenv-rails'
 
 gem 'resque-web', require: 'resque_web', github: 'mattgibson/resque-web', branch: 'fix-sprockets-manifest-error'
