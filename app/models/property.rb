@@ -130,7 +130,7 @@ class Property < ActiveRecord::Base
   end
 
   def fetch_current_nearby
-    RealtorExtractorService.new.fetch_by_geo_location(self.latitude, self.longitude, 0.05)
+    RealtorExtractorService.new.fetch_by_geo_location(self.latitude, self.longitude, 0.04)
   end
 
   def create_task
