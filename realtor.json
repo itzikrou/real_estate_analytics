@@ -241,3 +241,522 @@
       }
    ]
 }
+------ SALE ----
+
+{
+   "ErrorCode":{
+      "Description":"Success (See log)",
+      "Id":200,
+      "InnerException":"",
+      "LogId":"",
+      "Message":"",
+      "Stacktrace":"",
+      "Status":"Pins-Via-Cache:false;Sidebar-Items-Via-Cache:1;"
+   },
+   "Paging":{
+      "RecordsPerPage":9,
+      "CurrentPage":1,
+      "TotalRecords":1,
+      "MaxRecords":15000,
+      "TotalPages":1,
+      "RecordsShowing":1,
+      "Pins":1
+   },
+   "Results":[
+      {
+         "Id":"17202787",
+         "MlsNumber":"W3557219",
+         "PublicRemarks":"Stunning Custom Built 4 Bdrm Toronto Bungalow! Premium 286Ft Deep Walk Out Lot Backing On To Ravine! Renovated Gourmet Kitchen With Massive Breakfast Area & Heated Floors! Main Floor Den With Private Entrance! Vaulted Ceilings In Living\/Dining! W\/O To Balcony From Family Room! Master Suite With His & Hers Closets. Walk Out & Ensuite Bath! Finished Lower Level With Heated Floors, Wet Bar & Walk Out To Gorgeous Backyard With Inground Pool! Absolutely Stunning! **** EXTRAS **** Elightf; Gas Furnace; Cair; Cvac; Stainless Steel Decor 6 Burner Stove, D\/W, Sub-Zero Fridge; Basement: Fridge, Stove; Washer; Dryer; W\/I Fridge; Gas Bbq; Concrete Inground Gas Heated Pool With Equip; Garden Shed; Hwt(R); Heated Floors",
+         "Building":{
+            "BathroomTotal":"4",
+            "Bedrooms":"4 + 1",
+            "StoriesTotal":"1",
+            "Type":"House"
+         },
+         "Individual":[
+            {
+               "IndividualID":1417559,
+               "Name":"ERIC MATTEI",
+               "Organization":{
+                  "OrganizationID":274625,
+                  "Name":"ROYAL LEPAGE PORRITT REAL ESTATE",
+                  "Logo":"https:\/\/cdn.realtor.ca\/organization\/en-CA\/lowres\/274625.jpg",
+                  "Address":{
+                     "AddressText":"1500 ROYAL YORK ROAD|TORONTO, ON M9P3B6"
+                  },
+                  "Phones":[
+                     {
+                        "PhoneType":"Telephone",
+                        "PhoneNumber":"245-9933",
+                        "AreaCode":"416",
+                        "PhoneTypeId":"1"
+                     },
+                     {
+                        "PhoneType":"Fax",
+                        "PhoneNumber":"245-7830",
+                        "AreaCode":"416",
+                        "PhoneTypeId":"4"
+                     }
+                  ],
+                  "Designation":"Brokerage",
+                  "PermitFreetextEmail":true,
+                  "PermitShowListingLink":true
+               },
+               "Phones":[
+                  {
+                     "PhoneType":"Telephone",
+                     "PhoneNumber":"557-7653",
+                     "AreaCode":"416",
+                     "PhoneTypeId":"1"
+                  },
+                  {
+                     "PhoneType":"Toll Free",
+                     "PhoneNumber":"753-7243",
+                     "AreaCode":"866",
+                     "PhoneTypeId":"5"
+                  }
+               ],
+               "Websites":[
+                  {
+                     "Website":"http:\/\/www.ericmattei.com",
+                     "WebsiteTypeId":"1"
+                  }
+               ],
+               "Emails":[
+                  {
+                     "ContactId":"372088372"
+                  }
+               ],
+               "Photo":"https:\/\/cdn.realtor.ca\/individual\/lowres\/1417559.jpg",
+               "Position":"Broker",
+               "PermitFreetextEmail":true,
+               "FirstName":"ERIC",
+               "LastName":"MATTEI",
+               "CorporationDisplayTypeId":"0",
+               "PermitShowListingLink":true
+            },
+            {
+               "IndividualID":1422406,
+               "Name":"DARIO MATTEI",
+               "Organization":{
+                  "OrganizationID":274625,
+                  "Name":"ROYAL LEPAGE PORRITT REAL ESTATE",
+                  "Logo":"https:\/\/cdn.realtor.ca\/organization\/en-CA\/lowres\/274625.jpg",
+                  "Address":{
+                     "AddressText":"1500 ROYAL YORK ROAD|TORONTO, ON M9P3B6"
+                  },
+                  "Phones":[
+                     {
+                        "PhoneType":"Telephone",
+                        "PhoneNumber":"245-9933",
+                        "AreaCode":"416",
+                        "PhoneTypeId":"1"
+                     },
+                     {
+                        "PhoneType":"Fax",
+                        "PhoneNumber":"245-7830",
+                        "AreaCode":"416",
+                        "PhoneTypeId":"4"
+                     }
+                  ],
+                  "Designation":"Brokerage",
+                  "PermitFreetextEmail":true,
+                  "PermitShowListingLink":true
+               },
+               "Phones":[
+                  {
+                     "PhoneType":"Telephone",
+                     "PhoneNumber":"557-7653",
+                     "AreaCode":"416",
+                     "PhoneTypeId":"1"
+                  },
+                  {
+                     "PhoneType":"Toll Free",
+                     "PhoneNumber":"753-7243",
+                     "AreaCode":"866",
+                     "PhoneTypeId":"5"
+                  }
+               ],
+               "Websites":[
+                  {
+                     "Website":"http:\/\/www.dariomattei.com",
+                     "WebsiteTypeId":"1"
+                  }
+               ],
+               "Emails":[
+                  {
+                     "ContactId":"372098614"
+                  }
+               ],
+               "Photo":"https:\/\/cdn.realtor.ca\/individual\/lowres\/1422406.jpg",
+               "Position":"Broker",
+               "PermitFreetextEmail":true,
+               "FirstName":"DARIO",
+               "LastName":"MATTEI",
+               "CorporationDisplayTypeId":"0",
+               "PermitShowListingLink":true
+            }
+         ],
+         "Property":{
+            "Price":"$949,000",
+            "Type":"Single Family",
+            "Address":{
+               "AddressText":"90 GULLIVER RD|Toronto, Ontario M6M2M6",
+               "Longitude":"-79.48172",
+               "Latitude":"43.69898"
+            },
+            "Photo":[
+               {
+                  "SequenceId":"1",
+                  "HighResPath":"https:\/\/cdn.realtor.ca\/listing\/TS636045464273200000\/reb82\/highres\/9\/w3557219_1.jpg",
+                  "MedResPath":"https:\/\/cdn.realtor.ca\/listing\/TS636045464273200000\/reb82\/medres\/9\/w3557219_1.jpg",
+                  "LowResPath":"https:\/\/cdn.realtor.ca\/listing\/TS636045464273200000\/reb82\/lowres\/9\/w3557219_1.jpg",
+                  "LastUpdated":"19\/07\/2016 5:33:47 PM"
+               }
+            ],
+            "Parking":[
+               {
+                  "Name":"Attached garage"
+               }
+            ],
+            "ParkingSpaceTotal":"6",
+            "TypeId":"300",
+            "OwnershipType":"Freehold",
+            "AmmenitiesNearBy":"Hospital, Park, Public Transit, Schools"
+         },
+         "Business":{
+
+         },
+         "Land":{
+            "SizeTotal":"45.00x284.00 FT"
+         },
+         "AlternateURL":{
+            "VideoLink":"http:\/\/www.propertyspaces.ca\/90gulliver"
+         },
+         "PostalCode":"M6M2M6",
+         "RelativeDetailsURL":"\/Residential\/Single-Family\/17202787\/90-GULLIVER-RD-Toronto-Ontario-M6M2M6-Brookhaven-Amesbury",
+         "StatusId":"1"
+      }
+   ],
+   "Pins":[
+      {
+         "key":"",
+         "propertyId":"17202787",
+         "count":1,
+         "longitude":"-79.4817",
+         "latitude":"43.6989"
+      }
+   ]
+}
+
+
+----- RENT OR SALE --- 
+
+{
+   "ErrorCode":{
+      "Description":"Success (See log)",
+      "Id":200,
+      "InnerException":"",
+      "LogId":"",
+      "Message":"",
+      "Stacktrace":"",
+      "Status":"Pins-Via-Cache:false;Sidebar-Items-Via-Cache:2;"
+   },
+   "Paging":{
+      "RecordsPerPage":9,
+      "CurrentPage":1,
+      "TotalRecords":2,
+      "MaxRecords":15000,
+      "TotalPages":1,
+      "RecordsShowing":2,
+      "Pins":2
+   },
+   "Results":[
+      {
+         "Id":"17178980",
+         "MlsNumber":"W3551378",
+         "PublicRemarks":"Detached All-Brick Bungalow In A Beautiful Quiet Area. 4 Bedroom 2 Bathroom Home With Large Backyard Space. Home Is Move In Ready Condition. Minutes From The Ttc\/401\/400, Shopping, Schools, Community Centers, And The New Humber River Hospital. $1500 For Main Floor + Utilities $1050 For The Basement + Utilities. The Seller And His Agent Do Not Warrant The Retrofit Status Of The Basement Apartment. **** EXTRAS **** Included: Stainless Steal Fridge\/Oven On Main Floor. En Suite Washer\/Dryer. Fridge, Stove, Washer, Dryer In Basement. Elf, Window Coverings.",
+         "Building":{
+            "BathroomTotal":"2",
+            "Bedrooms":"3 + 1",
+            "StoriesTotal":"1",
+            "Type":"House"
+         },
+         "Individual":[
+            {
+               "IndividualID":2007771,
+               "Name":"JONATHAN SANTOS",
+               "Organization":{
+                  "OrganizationID":51229,
+                  "Name":"ROYAL LEPAGE URBAN REALTY",
+                  "Logo":"https:\/\/cdn.realtor.ca\/organization\/en-CA\/lowres\/1002956.jpg",
+                  "Address":{
+                     "AddressText":"840 PAPE AVENUE|TORONTO, ON M4K3T6"
+                  },
+                  "Phones":[
+                     {
+                        "PhoneType":"Telephone",
+                        "PhoneNumber":"461-9900",
+                        "AreaCode":"416",
+                        "PhoneTypeId":"1"
+                     },
+                     {
+                        "PhoneType":"Fax",
+                        "PhoneNumber":"461-9270",
+                        "AreaCode":"416",
+                        "PhoneTypeId":"4"
+                     }
+                  ],
+                  "Designation":"Brokerage",
+                  "PermitFreetextEmail":true,
+                  "PermitShowListingLink":true
+               },
+               "Phones":[
+                  {
+                     "PhoneType":"Telephone",
+                     "PhoneNumber":"461-9900",
+                     "AreaCode":"416",
+                     "PhoneTypeId":"1"
+                  }
+               ],
+               "Emails":[
+                  {
+                     "ContactId":"390069732"
+                  }
+               ],
+               "Position":"Salesperson",
+               "PermitFreetextEmail":true,
+               "FirstName":"JONATHAN",
+               "LastName":"SANTOS",
+               "CorporationDisplayTypeId":"0",
+               "PermitShowListingLink":true
+            }
+         ],
+         "Property":{
+            "LeaseRent":"$2,550\/Monthly",
+            "Type":"Single Family",
+            "Address":{
+               "AddressText":"90 FLAMBOROUGH DR|Toronto, Ontario M6M2R7",
+               "Longitude":"-79.4826099",
+               "Latitude":"43.7005399"
+            },
+            "Photo":[
+               {
+                  "SequenceId":"1",
+                  "HighResPath":"https:\/\/cdn.realtor.ca\/listing\/TS636040008609570000\/reb82\/highres\/8\/w3551378_1.jpg",
+                  "MedResPath":"https:\/\/cdn.realtor.ca\/listing\/TS636040008609570000\/reb82\/medres\/8\/w3551378_1.jpg",
+                  "LowResPath":"https:\/\/cdn.realtor.ca\/listing\/TS636040008609570000\/reb82\/lowres\/8\/w3551378_1.jpg",
+                  "LastUpdated":"13\/07\/2016 10:01:00 AM"
+               }
+            ],
+            "Parking":[
+               {
+                  "Name":"Detached garage"
+               }
+            ],
+            "ParkingSpaceTotal":"3",
+            "TypeId":"300",
+            "OwnershipType":"Freehold"
+         },
+         "Business":{
+
+         },
+         "Land":{
+            "SizeTotal":"55.00x143.50 FT"
+         },
+         "PostalCode":"M6M2R7",
+         "RelativeDetailsURL":"\/Residential\/Single-Family\/17178980\/90-FLAMBOROUGH-DR-Toronto-Ontario-M6M2R7-Brookhaven-Amesbury",
+         "StatusId":"1"
+      },
+      {
+         "Id":"17202787",
+         "MlsNumber":"W3557219",
+         "PublicRemarks":"Stunning Custom Built 4 Bdrm Toronto Bungalow! Premium 286Ft Deep Walk Out Lot Backing On To Ravine! Renovated Gourmet Kitchen With Massive Breakfast Area & Heated Floors! Main Floor Den With Private Entrance! Vaulted Ceilings In Living\/Dining! W\/O To Balcony From Family Room! Master Suite With His & Hers Closets. Walk Out & Ensuite Bath! Finished Lower Level With Heated Floors, Wet Bar & Walk Out To Gorgeous Backyard With Inground Pool! Absolutely Stunning! **** EXTRAS **** Elightf; Gas Furnace; Cair; Cvac; Stainless Steel Decor 6 Burner Stove, D\/W, Sub-Zero Fridge; Basement: Fridge, Stove; Washer; Dryer; W\/I Fridge; Gas Bbq; Concrete Inground Gas Heated Pool With Equip; Garden Shed; Hwt(R); Heated Floors",
+         "Building":{
+            "BathroomTotal":"4",
+            "Bedrooms":"4 + 1",
+            "StoriesTotal":"1",
+            "Type":"House"
+         },
+         "Individual":[
+            {
+               "IndividualID":1417559,
+               "Name":"ERIC MATTEI",
+               "Organization":{
+                  "OrganizationID":274625,
+                  "Name":"ROYAL LEPAGE PORRITT REAL ESTATE",
+                  "Logo":"https:\/\/cdn.realtor.ca\/organization\/en-CA\/lowres\/274625.jpg",
+                  "Address":{
+                     "AddressText":"1500 ROYAL YORK ROAD|TORONTO, ON M9P3B6"
+                  },
+                  "Phones":[
+                     {
+                        "PhoneType":"Telephone",
+                        "PhoneNumber":"245-9933",
+                        "AreaCode":"416",
+                        "PhoneTypeId":"1"
+                     },
+                     {
+                        "PhoneType":"Fax",
+                        "PhoneNumber":"245-7830",
+                        "AreaCode":"416",
+                        "PhoneTypeId":"4"
+                     }
+                  ],
+                  "Designation":"Brokerage",
+                  "PermitFreetextEmail":true,
+                  "PermitShowListingLink":true
+               },
+               "Phones":[
+                  {
+                     "PhoneType":"Telephone",
+                     "PhoneNumber":"557-7653",
+                     "AreaCode":"416",
+                     "PhoneTypeId":"1"
+                  },
+                  {
+                     "PhoneType":"Toll Free",
+                     "PhoneNumber":"753-7243",
+                     "AreaCode":"866",
+                     "PhoneTypeId":"5"
+                  }
+               ],
+               "Websites":[
+                  {
+                     "Website":"http:\/\/www.ericmattei.com",
+                     "WebsiteTypeId":"1"
+                  }
+               ],
+               "Emails":[
+                  {
+                     "ContactId":"372088372"
+                  }
+               ],
+               "Photo":"https:\/\/cdn.realtor.ca\/individual\/lowres\/1417559.jpg",
+               "Position":"Broker",
+               "PermitFreetextEmail":true,
+               "FirstName":"ERIC",
+               "LastName":"MATTEI",
+               "CorporationDisplayTypeId":"0",
+               "PermitShowListingLink":true
+            },
+            {
+               "IndividualID":1422406,
+               "Name":"DARIO MATTEI",
+               "Organization":{
+                  "OrganizationID":274625,
+                  "Name":"ROYAL LEPAGE PORRITT REAL ESTATE",
+                  "Logo":"https:\/\/cdn.realtor.ca\/organization\/en-CA\/lowres\/274625.jpg",
+                  "Address":{
+                     "AddressText":"1500 ROYAL YORK ROAD|TORONTO, ON M9P3B6"
+                  },
+                  "Phones":[
+                     {
+                        "PhoneType":"Telephone",
+                        "PhoneNumber":"245-9933",
+                        "AreaCode":"416",
+                        "PhoneTypeId":"1"
+                     },
+                     {
+                        "PhoneType":"Fax",
+                        "PhoneNumber":"245-7830",
+                        "AreaCode":"416",
+                        "PhoneTypeId":"4"
+                     }
+                  ],
+                  "Designation":"Brokerage",
+                  "PermitFreetextEmail":true,
+                  "PermitShowListingLink":true
+               },
+               "Phones":[
+                  {
+                     "PhoneType":"Telephone",
+                     "PhoneNumber":"557-7653",
+                     "AreaCode":"416",
+                     "PhoneTypeId":"1"
+                  },
+                  {
+                     "PhoneType":"Toll Free",
+                     "PhoneNumber":"753-7243",
+                     "AreaCode":"866",
+                     "PhoneTypeId":"5"
+                  }
+               ],
+               "Websites":[
+                  {
+                     "Website":"http:\/\/www.dariomattei.com",
+                     "WebsiteTypeId":"1"
+                  }
+               ],
+               "Emails":[
+                  {
+                     "ContactId":"372098614"
+                  }
+               ],
+               "Photo":"https:\/\/cdn.realtor.ca\/individual\/lowres\/1422406.jpg",
+               "Position":"Broker",
+               "PermitFreetextEmail":true,
+               "FirstName":"DARIO",
+               "LastName":"MATTEI",
+               "CorporationDisplayTypeId":"0",
+               "PermitShowListingLink":true
+            }
+         ],
+         "Property":{
+            "Price":"$949,000",
+            "Type":"Single Family",
+            "Address":{
+               "AddressText":"90 GULLIVER RD|Toronto, Ontario M6M2M6",
+               "Longitude":"-79.48172",
+               "Latitude":"43.69898"
+            },
+            "Photo":[
+               {
+                  "SequenceId":"1",
+                  "HighResPath":"https:\/\/cdn.realtor.ca\/listing\/TS636045464273200000\/reb82\/highres\/9\/w3557219_1.jpg",
+                  "MedResPath":"https:\/\/cdn.realtor.ca\/listing\/TS636045464273200000\/reb82\/medres\/9\/w3557219_1.jpg",
+                  "LowResPath":"https:\/\/cdn.realtor.ca\/listing\/TS636045464273200000\/reb82\/lowres\/9\/w3557219_1.jpg",
+                  "LastUpdated":"19\/07\/2016 5:33:47 PM"
+               }
+            ],
+            "Parking":[
+               {
+                  "Name":"Attached garage"
+               }
+            ],
+            "ParkingSpaceTotal":"6",
+            "TypeId":"300",
+            "OwnershipType":"Freehold",
+            "AmmenitiesNearBy":"Hospital, Park, Public Transit, Schools"
+         },
+         "Business":{
+
+         },
+         "Land":{
+            "SizeTotal":"45.00x284.00 FT"
+         },
+         "AlternateURL":{
+            "VideoLink":"http:\/\/www.propertyspaces.ca\/90gulliver"
+         },
+         "PostalCode":"M6M2M6",
+         "RelativeDetailsURL":"\/Residential\/Single-Family\/17202787\/90-GULLIVER-RD-Toronto-Ontario-M6M2M6-Brookhaven-Amesbury",
+         "StatusId":"1"
+      }
+   ],
+   "Pins":[
+      {
+         "key":"",
+         "propertyId":"17202787",
+         "count":1,
+         "longitude":"-79.4817",
+         "latitude":"43.6989"
+      },
+      {
+         "key":"",
+         "propertyId":"17178980",
+         "count":1,
+         "longitude":"-79.4826",
+         "latitude":"43.7005"
+      }
+   ]
+}
