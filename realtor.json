@@ -111,3 +111,133 @@
     "RelativeDetailsURL" => "/Residential/Single-Family/17111082/2220-BOIS-VERT-PLACE-Orleans-Ontario-K4A4T7-Avalon",
               "StatusId" => "1"
 }
+
+
+---------------------- RENT---------------------
+{
+   "ErrorCode":{
+      "Description":"Success (See log)",
+      "Id":200,
+      "InnerException":"",
+      "LogId":"",
+      "Message":"",
+      "Stacktrace":"",
+      "Status":"Pins-Via-Cache:false;Sidebar-Items-Via-Cache:1;"
+   },
+   "Paging":{
+      "RecordsPerPage":9,
+      "CurrentPage":1,
+      "TotalRecords":1,
+      "MaxRecords":15000,
+      "TotalPages":1,
+      "RecordsShowing":1,
+      "Pins":1
+   },
+   "Results":[
+      {
+         "Id":"17178980",
+         "MlsNumber":"W3551378",
+         "PublicRemarks":"Detached All-Brick Bungalow In A Beautiful Quiet Area. 4 Bedroom 2 Bathroom Home With Large Backyard Space. Home Is Move In Ready Condition. Minutes From The Ttc\/401\/400, Shopping, Schools, Community Centers, And The New Humber River Hospital. $1500 For Main Floor + Utilities $1050 For The Basement + Utilities. The Seller And His Agent Do Not Warrant The Retrofit Status Of The Basement Apartment. **** EXTRAS **** Included: Stainless Steal Fridge\/Oven On Main Floor. En Suite Washer\/Dryer. Fridge, Stove, Washer, Dryer In Basement. Elf, Window Coverings.",
+         "Building":{
+            "BathroomTotal":"2",
+            "Bedrooms":"3 + 1",
+            "StoriesTotal":"1",
+            "Type":"House"
+         },
+         "Individual":[
+            {
+               "IndividualID":2007771,
+               "Name":"JONATHAN SANTOS",
+               "Organization":{
+                  "OrganizationID":51229,
+                  "Name":"ROYAL LEPAGE URBAN REALTY",
+                  "Logo":"https:\/\/cdn.realtor.ca\/organization\/en-CA\/lowres\/1002956.jpg",
+                  "Address":{
+                     "AddressText":"840 PAPE AVENUE|TORONTO, ON M4K3T6"
+                  },
+                  "Phones":[
+                     {
+                        "PhoneType":"Telephone",
+                        "PhoneNumber":"461-9900",
+                        "AreaCode":"416",
+                        "PhoneTypeId":"1"
+                     },
+                     {
+                        "PhoneType":"Fax",
+                        "PhoneNumber":"461-9270",
+                        "AreaCode":"416",
+                        "PhoneTypeId":"4"
+                     }
+                  ],
+                  "Designation":"Brokerage",
+                  "PermitFreetextEmail":true,
+                  "PermitShowListingLink":true
+               },
+               "Phones":[
+                  {
+                     "PhoneType":"Telephone",
+                     "PhoneNumber":"461-9900",
+                     "AreaCode":"416",
+                     "PhoneTypeId":"1"
+                  }
+               ],
+               "Emails":[
+                  {
+                     "ContactId":"390069732"
+                  }
+               ],
+               "Position":"Salesperson",
+               "PermitFreetextEmail":true,
+               "FirstName":"JONATHAN",
+               "LastName":"SANTOS",
+               "CorporationDisplayTypeId":"0",
+               "PermitShowListingLink":true
+            }
+         ],
+         "Property":{
+            "LeaseRent":"$2,550\/Monthly",
+            "Type":"Single Family",
+            "Address":{
+               "AddressText":"90 FLAMBOROUGH DR|Toronto, Ontario M6M2R7",
+               "Longitude":"-79.4826099",
+               "Latitude":"43.7005399"
+            },
+            "Photo":[
+               {
+                  "SequenceId":"1",
+                  "HighResPath":"https:\/\/cdn.realtor.ca\/listing\/TS636040008609570000\/reb82\/highres\/8\/w3551378_1.jpg",
+                  "MedResPath":"https:\/\/cdn.realtor.ca\/listing\/TS636040008609570000\/reb82\/medres\/8\/w3551378_1.jpg",
+                  "LowResPath":"https:\/\/cdn.realtor.ca\/listing\/TS636040008609570000\/reb82\/lowres\/8\/w3551378_1.jpg",
+                  "LastUpdated":"13\/07\/2016 10:01:00 AM"
+               }
+            ],
+            "Parking":[
+               {
+                  "Name":"Detached garage"
+               }
+            ],
+            "ParkingSpaceTotal":"3",
+            "TypeId":"300",
+            "OwnershipType":"Freehold"
+         },
+         "Business":{
+
+         },
+         "Land":{
+            "SizeTotal":"55.00x143.50 FT"
+         },
+         "PostalCode":"M6M2R7",
+         "RelativeDetailsURL":"\/Residential\/Single-Family\/17178980\/90-FLAMBOROUGH-DR-Toronto-Ontario-M6M2R7-Brookhaven-Amesbury",
+         "StatusId":"1"
+      }
+   ],
+   "Pins":[
+      {
+         "key":"",
+         "propertyId":"17178980",
+         "count":1,
+         "longitude":"-79.4826",
+         "latitude":"43.7005"
+      }
+   ]
+}
