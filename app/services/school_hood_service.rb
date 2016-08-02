@@ -1,7 +1,7 @@
 class SchoolHoodService
   def self.fetch_urls
     urls = []
-    Gmail.new('listings.data@gmail.com', 'itaym777') do |gmail|
+    Gmail.new(ENV['GMAIL_USERNAME'], ENV['GMAIL_PASSWORD']) do |gmail|
       emails = gmail.inbox.emails(:unread).each{|email|
       puts "Read Email Executing"
       email_body = email.body.to_s     
