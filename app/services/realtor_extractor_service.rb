@@ -21,7 +21,7 @@ class RealtorExtractorService
             RealtorEntry.create(mls_id: result['MlsNumber'], data: result)
           }
           cur_page += 1
-        else       
+        else
           break
         end
       end
