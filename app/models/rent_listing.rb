@@ -55,5 +55,9 @@
 
 class RentListing < ActiveRecord::Base
 
+  enum status: [ :active, :leased, :unknown ]
+  enum basement_type: [ :finished, :apartment, :unfinished, :crawl_space, :no_basement]
+  enum home_type: [ :detached, :semi_detached, :condominum, :other ]
+  
 
 end

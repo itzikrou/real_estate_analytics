@@ -62,4 +62,5 @@ class SaleListing < ActiveRecord::Base
   enum basement_type: [ :finished, :apartment, :unfinished, :crawl_space, :no_basement]
   enum home_type: [ :detached, :semi_detached, :condominum, :other ]
   
+  
 end

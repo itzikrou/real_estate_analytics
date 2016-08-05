@@ -1,0 +1,45 @@
+<h3><%= link_to '<< Back', controller: 'welcome' %> </h3>
+
+<h3>Listings in database: <%= @sale_listings.count%></h3>
+<%= search_form_for @q do |f| %>
+  <br>
+  <%= f.label :address_or_status_or_postal_cont %>
+  <%= f.search_field :address_or_status_or_postal_cont %>
+  <%= f.submit %>
+<% end %>
+
+<%= search_form_for @q do |f| %>
+  <br>
+  <%= f.label :expected_return_rate_gt %>
+  <%= f.search_field :expected_return_rate_gt %> (0.05)
+  <%= f.submit %>
+<% end %>
+
+<h1>Sale Listings sale_listings</h1>
+<table>
+  <tr>
+    <th>mls_id</th>
+    <th><%= sort_link(@q, :status) %></th>
+    <th><%= sort_link(@q, :address) %></th>
+    <th><%= sort_link(@q, :asking_price) %></th>
+    <th><%= sort_link(@q, :postal) %></th>
+    <th><%= sort_link(@q, :bedrooms) %></th>
+    <th><%= sort_link(@q, :washrooms) %></th>
+    <th><%= sort_link(@q, :expected_return_rate) %></th>
+  </tr>
+ 
+  <% @sale_listings.each do |property| %>  
+    <tr>
+      <td><%= property.mls_id %></td>
+      <td><%= property.status %></td>
+      <td><%= property.address %></td>
+      <td><%= property.asking_price %></td>
+      <td><%= property.postal %></td>
+      <td><%= property.bedrooms %></td>
+      <td><%= property.washrooms %></td>
+      <td><%= property.expected_return_rate %></td>
+    </tr>
+  <% end %>
+
+</table>
+<%= will_paginate @properties %>
