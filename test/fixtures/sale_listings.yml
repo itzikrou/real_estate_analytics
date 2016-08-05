@@ -15,7 +15,7 @@
 #  taxes                :integer
 #  address              :string
 #  postal               :string
-#  longtitude           :float
+#  longitude            :float
 #  latitude             :float
 #  home_type            :integer
 #  home_style           :integer
