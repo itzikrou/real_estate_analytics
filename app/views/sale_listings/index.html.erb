@@ -3,8 +3,8 @@
 <h3>Listings in database: <%= @sale_listings.count%></h3>
 <%= search_form_for @q do |f| %>
   <br>
-  <%= f.label :address_or_status_or_postal_cont %>
-  <%= f.search_field :address_or_status_or_postal_cont %>
+  <%= f.label :address_or_postal_cont %>
+  <%= f.search_field :address_or_postal_cont %>
   <%= f.submit %>
 <% end %>
 
@@ -27,8 +27,8 @@
     <th><%= sort_link(@q, :washrooms) %></th>
     <th><%= sort_link(@q, :expected_return_rate) %></th>
   </tr>
- 
-  <% @sale_listings.each do |property| %>  
+
+  <% @sale_listings.each do |property| %>
     <tr>
       <td><%= property.mls_id %></td>
       <td><%= property.status %></td>
@@ -37,7 +37,7 @@
       <td><%= property.postal %></td>
       <td><%= property.bedrooms %></td>
       <td><%= property.washrooms %></td>
-      <td><%= property.expected_return_rate %></td>
+      <td><b><%= '%.1f' % (property.expected_return_rate) rescue nil %><b></td>
     </tr>
   <% end %>
 

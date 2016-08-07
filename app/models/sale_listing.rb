@@ -58,9 +58,38 @@ class SaleListing < ActiveRecord::Base
   # validations
   validates :mls_id, uniqueness: true
 
+  reverse_geocoded_by :latitude, :longitude
+  after_validation :reverse_geocode  # auto-fetch address
+
   enum status: [ :active, :sold, :unknown ]
   enum basement_type: [ :finished, :apartment, :unfinished, :crawl_space, :no_basement]
   enum home_type: [ :detached, :semi_detached, :condominum, :other ]
-  
-  
+
+  scope :where_near_by, -> (latitude, longitude) {
+    near([latitude, longitude], 50, :order => :distance)
+  }
+
+  before_save :calculate_expected_return_rate
+
+# results = Geocoder.search("#328 - 60 FAIRFAX CRES,Toronto, Ontario M1L1Z8")
+
+  def calculate_expected_return_rate
+    rented_avarage = RentListing.near(coordinate, 1, units: :km)
+                      .where(bedrooms: self.bedrooms)
+                      .average(:asking_price)
+
+    if rented_avarage.present?
+      self.expected_return_rate = ((rented_avarage * 12) / asking_price) * 100
+    end
+  end
+
+  # get the street name
+  def street_name
+
+  end
+
+  def coordinate
+    [self.latitude, self.longitude]
+  end
+
 end

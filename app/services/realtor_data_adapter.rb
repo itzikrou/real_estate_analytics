@@ -32,6 +32,7 @@ class RealtorDataAdapter
     sale_listing.num_of_stories = @info['Building']['StoriesTotal'].to_i
     sale_listing.postal   = @info['Land']['PostalCode']
     sale_listing.remarks  = @info['PublicRemarks']
+    sale_listing.status   = SaleListing.statuses['active']
     sale_listing.raw_data = @info
     sale_listing.save!
   end
@@ -49,6 +50,7 @@ class RealtorDataAdapter
     rent_listing.num_of_stories = @info['Building']['StoriesTotal'].to_i
     rent_listing.postal   = @info['Land']['PostalCode']
     rent_listing.remarks  = @info['PublicRemarks']
+    rent_listing.status   = RentListing.statuses['active']
     rent_listing.raw_data = @info
     rent_listing.save!
   end

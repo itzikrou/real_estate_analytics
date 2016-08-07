@@ -69,9 +69,7 @@ class Property < ActiveRecord::Base
   # validations
   validates :mls_id, uniqueness: true
 
-
-
-  # reverse_geocoded_by :latitude, :longitude do |obj,results|    
+  # reverse_geocoded_by :latitude, :longitude do |obj,results|
   #   if geo = results.first
   #     obj.city    = geo.city
   #     obj.zipcode = geo.postal_code
@@ -92,7 +90,7 @@ class Property < ActiveRecord::Base
     where.not(leased_date: nil)
   }
 
-  def calculate_expected_return_rate    
+  def calculate_expected_return_rate
     # same street, municipality, texas, sale_price, leased_price
     if self.sale_price.present?
       transaction_price = self.sale_price
@@ -110,7 +108,7 @@ class Property < ActiveRecord::Base
 
     if rented_avarage == 0 || rented_avarage.blank?
       return
-    end    
+    end
     calc_return_rate = ( (rented_avarage * 12) / transaction_price ) rescue nil
     if calc_return_rate < 0.09 && calc_return_rate > 0
       self.expected_return_rate = calc_return_rate
@@ -121,7 +119,7 @@ class Property < ActiveRecord::Base
 
   def fetch_realtor
     body = HttpAdapter.body(longitude, longitude+10, latitude, latitude+10)
-    res = HttpAdapter.post(body)    
+    res = HttpAdapter.post(body)
   end
 
   def compareables
