@@ -72,12 +72,12 @@ class SaleListing < ActiveRecord::Base
   before_save :calculate_expected_return_rate
 
 # results = Geocoder.search("#328 - 60 FAIRFAX CRES,Toronto, Ontario M1L1Z8")
+# Client.where("first_name LIKE '%#{params[:first_name]}%'")
 
   def calculate_expected_return_rate
     rented_avarage = RentListing.near(coordinate, 1, units: :km)
                       .where(bedrooms: self.bedrooms)
                       .average(:asking_price)
-
     if rented_avarage.present?
       self.expected_return_rate = ((rented_avarage * 12) / asking_price) * 100
     end
