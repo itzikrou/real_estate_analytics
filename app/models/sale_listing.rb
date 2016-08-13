@@ -78,6 +78,7 @@ class SaleListing < ActiveRecord::Base
     rented_avarage = RentListing.near(coordinate, 1, units: :km)
                       .where(bedrooms: self.bedrooms)
                       .average(:asking_price)
+                                            
     if rented_avarage.present?
       self.expected_return_rate = ((rented_avarage * 12) / asking_price) * 100
     end
@@ -86,6 +87,10 @@ class SaleListing < ActiveRecord::Base
   # get the street name
   def street_name
 
+  end
+
+  def realtor_id
+    raw_data['Id'] rescue nil
   end
 
   def coordinate
