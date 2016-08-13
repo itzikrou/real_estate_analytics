@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     resources :properties
 
     resources :sale_listings
+    resources :rent_listings
 
     resources :realtor_entries
 
