@@ -10,3 +10,4 @@ RealtorEntry.all.each{|re| RealtorDataAdapter.new(re.data).create_data_entry}
   Property.all.each{|p| MlsEmailDataAdapter.new(p.parsed_data).create_data_entry}
 
   EmailWorker.perform
+i = 0; while i<20 do SaleListing.all.sample.fetch_current_nearby ; i = i+1 ; sleep(20) end

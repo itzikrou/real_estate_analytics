@@ -62,6 +62,7 @@
 #  total_rooms          :integer
 #  basement_rooms       :integer
 #  expected_return_rate :float
+#  exported_at          :datetime
 #
 
 require 'test_helper'

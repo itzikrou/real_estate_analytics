@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160804023828) do
+ActiveRecord::Schema.define(version: 20160813150332) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -113,13 +113,15 @@ ActiveRecord::Schema.define(version: 20160804023828) do
     t.integer  "total_rooms"
     t.integer  "basement_rooms"
     t.float    "expected_return_rate"
+    t.datetime "exported_at"
   end
 
   create_table "realtor_entries", force: :cascade do |t|
     t.jsonb    "data"
     t.string   "mls_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.datetime "exported_at"
   end
 
   create_table "rent_listings", force: :cascade do |t|

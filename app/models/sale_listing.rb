@@ -90,6 +90,10 @@ class SaleListing < ActiveRecord::Base
 
   end
 
+  def fetch_current_nearby
+    RealtorExtractorService.new.fetch_by_geo_location(self.latitude, self.longitude, 0.04)
+  end
+
   def realtor_id
     raw_data['Id'] rescue nil
   end

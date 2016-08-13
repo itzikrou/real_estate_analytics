@@ -62,6 +62,7 @@
 #  total_rooms          :integer
 #  basement_rooms       :integer
 #  expected_return_rate :float
+#  exported_at          :datetime
 #
 
 class Property < ActiveRecord::Base
@@ -88,6 +89,10 @@ class Property < ActiveRecord::Base
 
   scope :rented, -> {
     where.not(leased_date: nil)
+  }
+
+  scope :not_exported, -> {
+    where(exported_at: nil)
   }
 
   def calculate_expected_return_rate
