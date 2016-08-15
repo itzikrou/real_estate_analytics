@@ -10,4 +10,15 @@
 </form>
 </h3>
 
+<h3><form action="/realtor_entries" method="post">
+  Lat: <input type="text_field" size="80" name="lat">
+  <br>
+  Lon: <input type="text_field" size="80" name="lon">
+  <br>
+  margin: <input type="text_field" value="0.03" size="5" name="margin">
+  <br>
+  <input type="submit" value="Insert coords">
+</form>
+</h3>
+
 <p>Number of pages scraped: <%= @num_pages_scraped %></p>

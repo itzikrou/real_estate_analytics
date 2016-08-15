@@ -58,8 +58,8 @@ class SaleListing < ActiveRecord::Base
   # validations
   validates :mls_id, uniqueness: true
 
-  reverse_geocoded_by :latitude, :longitude
-  after_validation :reverse_geocode  # auto-fetch address
+  # reverse_geocoded_by :latitude, :longitude
+  # after_validation :reverse_geocode  # auto-fetch address
 
   enum status: [ :active, :sold, :unknown ]
   enum basement_type: [ :finished, :apartment, :unfinished, :crawl_space, :no_basement]
@@ -69,7 +69,7 @@ class SaleListing < ActiveRecord::Base
     near([latitude, longitude], 50, :order => :distance)
   }
 
-  before_save :calculate_expected_return_rate
+  # before_save :calculate_expected_return_rate
 
 # results = Geocoder.search("#328 - 60 FAIRFAX CRES,Toronto, Ontario M1L1Z8")
 # Client.where("first_name LIKE '%#{params[:first_name]}%'")

@@ -14,9 +14,13 @@ class RealtorEntry < ActiveRecord::Base
   # validations
   validates :mls_id, uniqueness: true
 
+  scope :not_exported, -> {
+    where(exported_at: nil)
+  }
+
   def self.extract_realtor
-    Property.all.each{|prop|      
-      body = HttpAdapter.body(prop.longitude, prop.longitude+0.05, prop.latitude, prop.latitude+0.05)   
+    Property.all.each{|prop|
+      body = HttpAdapter.body(prop.longitude, prop.longitude+0.05, prop.latitude, prop.latitude+0.05)
       puts "PropID: #{prop.id}, coords: #{prop.longitude}, #{prop.latitude}"
       results = HttpAdapter.post(body)
       if results['Results'].present?

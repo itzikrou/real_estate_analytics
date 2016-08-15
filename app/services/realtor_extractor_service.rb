@@ -8,13 +8,13 @@ class RealtorExtractorService
 
       params[:LongitudeMin] = params[:LongitudeMin] - coords_adjust
       params[:LongitudeMax] = params[:LongitudeMax] + coords_adjust
-      params[:LatitudeMin] = params[:LatitudeMin] - coords_adjust      
+      params[:LatitudeMin] = params[:LatitudeMin] - coords_adjust
       params[:LatitudeMax] = params[:LatitudeMax] + coords_adjust
       puts "@@@@@@@ Change Coords @@@@@@@@@@@@"
       while true do
         params[:CurrentPage] = cur_page
-        body = build_msg_body(params)   
-        results = HttpAdapter.post(body, URL) 
+        body = build_msg_body(params)
+        results = HttpAdapter.post(body, URL)
         if results['Results'].present?
           results['Results'].each{|result|
             puts " This is the MLS number #{result['MlsNumber']}"
@@ -25,11 +25,11 @@ class RealtorExtractorService
           break
         end
       end
-    end    
+    end
   end
 
 
-  def fetch_by_address(address, margin = 0.03)    
+  def fetch_by_address(address, margin = 0.03)
     cur_page = 1
     params = req_params
     geo_details = Geocoder.search(address).first
@@ -44,16 +44,16 @@ class RealtorExtractorService
       params[:LatitudeMax]  = lat + margin
       params[:Latitude]  = lat
       params[:Longitude] = lon
-      
-      body = build_msg_body(params)   
-      results = HttpAdapter.post(body, URL) 
+
+      body = build_msg_body(params)
+      results = HttpAdapter.post(body, URL)
       if results['Results'].present?
         results['Results'].each{|result|
           puts " This is the MLS number #{result['MlsNumber']}"
           RealtorEntry.create(mls_id: result['MlsNumber'], data: result)
         }
         cur_page += 1
-      else       
+      else
         break
       end
     end
@@ -72,19 +72,20 @@ class RealtorExtractorService
       params[:LatitudeMax]  = lat + margin
       params[:Latitude]  = lat
       params[:Longitude] = lon
-      
-      body = build_msg_body(params)   
-      results = HttpAdapter.post(body, URL) 
+
+      body = build_msg_body(params)
+      results = HttpAdapter.post(body, URL)
       if results['Results'].present?
         results['Results'].each{|result|
           puts " This is the MLS number #{result['MlsNumber']}"
           RealtorEntry.create(mls_id: result['MlsNumber'], data: result)
         }
         cur_page += 1
-      else       
+      else
         break
       end
     end
+    cur_page
   end
 
   def req_params
@@ -105,7 +106,7 @@ class RealtorExtractorService
   end
 
   def build_msg_body(params)
-    msg_params = ''    
+    msg_params = ''
     params.map{|k,v| "#{k}=#{v}"}.each{|item| msg_params += "&#{item}"}
     msg_params
   end

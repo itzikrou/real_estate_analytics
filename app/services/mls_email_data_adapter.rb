@@ -20,7 +20,7 @@ class MlsEmailDataAdapter
 
       # @property =  Property.find_or_create_by(mls_id: mls_id)
       # @property.parsed_data = @info
-      
+
       # # Summary data
       # @property.mls_id = mls_id
       # @property.address       = summary_info['addr'] rescue nil
@@ -37,7 +37,7 @@ class MlsEmailDataAdapter
       #   @property.listing_status  = summary_info['lsc'] rescue nil
       #   @property.bedrooms    = summary_info['br'].to_i rescue nil
       #   @property.washrooms   = summary_info['bath_tot'].to_i rescue nil
-        
+
       #   if @property.listing_status == 'New'
       #       @property.list_price = summary_info['lp_dol'].to_i rescue nil
       #   elsif @property.listing_status == 'Sld'
@@ -127,7 +127,6 @@ class MlsEmailDataAdapter
     sale_listing.status       = summary_info['lsc'] == 'New' ? SaleListing.statuses['active'] : SaleListing.statuses['sold']
     sale_listing.raw_data     = @info
     sale_listing.save!
-
   end
 
   def create_rent_entry
@@ -148,7 +147,7 @@ class MlsEmailDataAdapter
     # rent_listing.home_type    = summary_info['type_own1_out'] rescue nil
     # rent_listing.home_style   = summary_info['style'] rescue nil
     rent_listing.status       = summary_info['lsc'] == 'New' ? RentListing.statuses['active'] : RentListing.statuses['leased']
-    rent_listing.raw_data     = @info
+    rent_listing.raw_data     = @info    
     rent_listing.save!
   end
 
@@ -156,10 +155,10 @@ class MlsEmailDataAdapter
     price > RENT_MAX_PRICE
   end
 
-  def parse_lot(str_lot)    
+  def parse_lot(str_lot)
     return nil if str_lot.blank?
     arr = str_lot.split(' ')
-    hash = {width: arr[0].to_f, length: arr[2].to_f, unit: arr[3]}    
+    hash = {width: arr[0].to_f, length: arr[2].to_f, unit: arr[3]}
   end
 
   def parse_date(date_str)
@@ -175,43 +174,43 @@ class MlsEmailDataAdapter
   end
 
   def parse_taxes(taxes_str)
-    return nil if taxes_str.blank?    
-    arr = taxes_str.split(' ')    
+    return nil if taxes_str.blank?
+    arr = taxes_str.split(' ')
     arr[0].slice!('$')
     arr[0].slice!(',')
     arr[0]
   end
 
     def parse_price(price_str)
-    return nil if price_str.blank?    
-    arr = price_str.split(' ')    
+    return nil if price_str.blank?
+    arr = price_str.split(' ')
     arr[0].slice!('$')
     arr[0].slice!(',')
     arr[0]
   end
 
   def parse_bedrooms(bedrooms_str)
-    return nil if bedrooms_str.blank?        
+    return nil if bedrooms_str.blank?
     arr = bedrooms_str.split(' ')
-    hash = {main: arr[0].to_i, basement: arr[2]}   
+    hash = {main: arr[0].to_i, basement: arr[2]}
   end
 
   def parse_washrooms(washrooms_str)
-    return nil if washrooms_str.blank?        
+    return nil if washrooms_str.blank?
     arr = washrooms_str.split(' ')
-    hash = {main: arr[0].to_i, basement: arr[2]}   
+    hash = {main: arr[0].to_i, basement: arr[2]}
   end
 
   def parse_kitchens(kitchens_str)
-    return nil if kitchens_str.blank?        
+    return nil if kitchens_str.blank?
     arr = kitchens_str.split(' ')
-    hash = {main: arr[0].to_i, basement: arr[2]}   
+    hash = {main: arr[0].to_i, basement: arr[2]}
   end
 
   def parse_total_rooms(rooms_str)
-    return nil if rooms_str.blank?        
+    return nil if rooms_str.blank?
     arr = rooms_str.split(' ')
-    hash = {main: arr[0].to_i, basement: arr[2]}   
+    hash = {main: arr[0].to_i, basement: arr[2]}
   end
 
   # Apx Age : 51-99

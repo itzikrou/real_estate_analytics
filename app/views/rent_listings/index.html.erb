@@ -18,7 +18,6 @@
     <th><%= sort_link(@q, :postal) %></th>
     <th><%= sort_link(@q, :bedrooms) %></th>
     <th><%= sort_link(@q, :washrooms) %></th>
-    <!-- <th><%= sort_link(@q, :expected_return_rate) %></th> -->
   </tr>
 
   <% @rent_listings.each do |property| %>
@@ -30,7 +29,6 @@
       <td><%= property.postal %></td>
       <td><%= property.bedrooms %></td>
       <td><%= property.washrooms %></td>
-      <!-- <td><b><%= '%.1f' % (property.expected_return_rate) rescue nil %><b></td> -->
     </tr>
   <% end %>
 
