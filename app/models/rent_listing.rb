@@ -62,5 +62,9 @@ class RentListing < ActiveRecord::Base
   enum basement_type: [ :finished, :apartment, :unfinished, :crawl_space, :no_basement]
   enum home_type: [ :detached, :semi_detached, :condominum, :other ]
 
+  def fetch_current_nearby(margin=0.04)
+    RealtorExtractorService.new.fetch_by_geo_location(self.latitude, self.longitude, margin)
+  end
+
 
 end

@@ -90,8 +90,8 @@ class SaleListing < ActiveRecord::Base
 
   end
 
-  def fetch_current_nearby
-    RealtorExtractorService.new.fetch_by_geo_location(self.latitude, self.longitude, 0.04)
+  def fetch_current_nearby(margin=0.04)
+    RealtorExtractorService.new.fetch_by_geo_location(self.latitude, self.longitude, margin)
   end
 
   def realtor_id

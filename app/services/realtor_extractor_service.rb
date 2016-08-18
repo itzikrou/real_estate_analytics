@@ -61,31 +61,36 @@ class RealtorExtractorService
   end
 
     def fetch_by_geo_location(lat, lon, margin)
-    cur_page = 1
-    params = req_params
-    while true do
-      puts "Fetch Page Number: #{cur_page}"
-      params[:CurrentPage]  = cur_page
-      params[:LongitudeMin] = lon - margin
-      params[:LongitudeMax] = lon + margin
-      params[:LatitudeMin]  = lat - margin
-      params[:LatitudeMax]  = lat + margin
-      params[:Latitude]  = lat
-      params[:Longitude] = lon
+      begin
+        cur_page = 1
+        params = req_params
+        while true do
+          puts "Fetch Page Number: #{cur_page}"
+          sleep(20)
+          params[:CurrentPage]  = cur_page
+          params[:LongitudeMin] = lon - margin
+          params[:LongitudeMax] = lon + margin
+          params[:LatitudeMin]  = lat - margin
+          params[:LatitudeMax]  = lat + margin
+          params[:Latitude]  = lat
+          params[:Longitude] = lon
 
-      body = build_msg_body(params)
-      results = HttpAdapter.post(body, URL)
-      if results['Results'].present?
-        results['Results'].each{|result|
-          puts " This is the MLS number #{result['MlsNumber']}"
-          RealtorEntry.create(mls_id: result['MlsNumber'], data: result)
-        }
-        cur_page += 1
-      else
-        break
+          body = build_msg_body(params)
+          results = HttpAdapter.post(body, URL)
+          if results['Results'].present?
+            results['Results'].each{|result|
+              puts " This is the MLS number #{result['MlsNumber']}"
+              RealtorEntry.create(mls_id: result['MlsNumber'], data: result)
+            }
+            cur_page += 1
+          else
+            break
+          end
+        end
+        cur_page
+      rescue => exception
+
       end
-    end
-    cur_page
   end
 
   def req_params
