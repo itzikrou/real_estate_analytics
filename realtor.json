@@ -29,7 +29,7 @@
                           "PhoneType" => "Fax",
                         "PhoneNumber" => "837-6499",
                            "AreaCode" => "613",
-                        "PhoneTypeId" => "4"
+                        "PhoneTypeId" => "1"
                     }
                 ],
                                "Emails" => [
