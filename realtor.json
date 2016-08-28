@@ -23,7 +23,7 @@
                           "PhoneType" => "Telephone",
                         "PhoneNumber" => "627-4141",
                            "AreaCode" => "613",
-                        "PhoneTypeId" => "1"
+                        "PhoneTypeId" => "0"
                     },
                     [1] {
                           "PhoneType" => "Fax",
