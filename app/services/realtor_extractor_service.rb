@@ -66,7 +66,7 @@ class RealtorExtractorService
         params = req_params
         while true do
           puts "Fetch Page Number: #{cur_page}"
-          sleep(20)
+          sleep(5)
           params[:CurrentPage]  = cur_page
           params[:LongitudeMin] = lon - margin
           params[:LongitudeMax] = lon + margin

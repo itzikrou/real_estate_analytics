@@ -58,7 +58,7 @@ class RentListing < ActiveRecord::Base
   # reverse_geocoded_by :latitude, :longitude
   # after_validation :reverse_geocode  # auto-fetch address
 
-  enum status: [ :active, :leased, :unknown ]
+  enum status: [ :active, :leased, :unknown, :not_found ]
   enum basement_type: [ :finished, :apartment, :unfinished, :crawl_space, :no_basement]
   enum home_type: [ :detached, :semi_detached, :condominum, :other ]
 

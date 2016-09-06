@@ -7,4 +7,4 @@ Property.not_exported.each{|p| res = MlsEmailDataAdapter.new(p.parsed_data).crea
 RealtorEntry.not_exported.each{|re| res = RealtorDataAdapter.new(re.data).create_data_entry; re.exported_at = DateTime.now if res; re.save!}
 EmailWorker.perform
 i = 0; while i<20 do SaleListing.all.sample.fetch_current_nearby ; i = i+1 ; sleep(20) end
-i = 0; while i<20 do RentListing.all.sample.fetch_current_nearby ; i = i+1 ; sleep(20) end
+i = 0; while i<20 do RentListing.all.sample.fetch_current_nearby ; i = i+1 ; sleep(3) end
