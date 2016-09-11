@@ -16,43 +16,6 @@ ActiveRecord::Schema.define(version: 20160813150332) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "entries", force: :cascade do |t|
-    t.string   "mls_id"
-    t.string   "address"
-    t.string   "street_name"
-    t.string   "street_number"
-    t.string   "listing_status"
-    t.string   "municipality"
-    t.string   "apt_unit"
-    t.integer  "beds"
-    t.integer  "wr"
-    t.string   "lsc"
-    t.integer  "list_price"
-    t.integer  "sale_price"
-    t.string   "postal"
-    t.string   "listing_type"
-    t.integer  "dom"
-    t.integer  "taxes"
-    t.text     "client_remarks"
-    t.text     "raw_data"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-  end
-
-  create_table "listings", force: :cascade do |t|
-    t.text     "raw_email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "pages", force: :cascade do |t|
-    t.text     "html"
-    t.string   "url"
-    t.boolean  "exported",   default: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-  end
-
   create_table "properties", force: :cascade do |t|
     t.string   "mls_id"
     t.string   "for"
