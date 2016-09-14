@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # get 'entry/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -14,9 +15,15 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
+    resources :entries
+
+    resources :pages
+
     resources :properties
+
     resources :sale_listings
     resources :rent_listings
+
     resources :realtor_entries
 
     resources :properties do
