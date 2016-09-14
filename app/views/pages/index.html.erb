@@ -1,0 +1,19 @@
+<h2>Index Pages</h2>
+<h3><%= link_to '<< Back', controller: 'welcome', action: 'index' %> </h3>
+
+<form action="/pages" method="post">
+  <input type="text_field" size="80" name="url">
+  <input type="submit" value="Add Links">
+</form>
+
+<table>
+  <tr>
+    <th>URL's</th>
+  </tr>
+ 
+  <% @pages.each do |page| %>  
+    <tr>
+      <td><%= page.url %></td>
+    </tr>
+  <% end %>
+</table>
