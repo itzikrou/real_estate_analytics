@@ -11,4 +11,14 @@ class RealtorEntriesController < ApplicationController
     end
     render action: "index"
   end
+
+  def index
+    @q = RealtorEntry.ransack(params[:q])
+    @realtor_entries = @q.result.paginate(page: params[:page], per_page: params[:per_page])
+  end
+
+  def show
+    @realtor_entry = RealtorEntry.find(params[:id])
+  end
+
 end
