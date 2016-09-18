@@ -58,10 +58,10 @@ class SaleListing < ActiveRecord::Base
   # validations
   validates :mls_id, uniqueness: true
 
-  # reverse_geocoded_by :latitude, :longitude
+  reverse_geocoded_by :latitude, :longitude
   # after_validation :reverse_geocode  # auto-fetch address
 
-  enum status: [ :active, :sold, :unknown ]
+  enum status: [ :active, :sold, :unknown, :not_found ]
   enum basement_type: [ :finished, :apartment, :unfinished, :crawl_space, :no_basement]
   enum home_type: [ :detached, :semi_detached, :condominum, :other ]
 

@@ -66,7 +66,7 @@ class RealtorExtractorService
         params = req_params
         while true do
           puts "Fetch Page Number: #{cur_page}"
-          sleep(20)
+          sleep(1)
           params[:CurrentPage]  = cur_page
           params[:LongitudeMin] = lon - margin
           params[:LongitudeMax] = lon + margin
@@ -80,7 +80,10 @@ class RealtorExtractorService
           if results['Results'].present?
             results['Results'].each{|result|
               puts " This is the MLS number #{result['MlsNumber']}"
-              RealtorEntry.create(mls_id: result['MlsNumber'], data: result)
+              RealtorEntry.find_or_create_by(mls_id: result['MlsNumber']) do |entry|
+                entry.data = result
+              end
+              # RealtorEntry.create(mls_id: result['MlsNumber'], data: result)
             }
             cur_page += 1
           else
