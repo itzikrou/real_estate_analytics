@@ -8,29 +8,30 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   # Example of regular route:
-    # get 'entries/:id' => 'entry#view'
-    # get 'entries' => 'entry#view'
+  # get 'entries/:id' => 'entry#view'
+  # get 'entries' => 'entry#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-    resources :entries
+  resources :entries
 
-    resources :pages
+  resources :pages
 
-    resources :properties
+  resources :properties
 
-    resources :sale_listings
-    resources :rent_listings
+  # resources :sale_listings
+  resources :sale_listings, controller: 'new_sale_listings'
+  resources :rent_listings
 
-    resources :realtor_entries
+  resources :realtor_entries
 
-    resources :properties do
-      collection do
-        get 'compareables'
-      end
+  resources :properties do
+    collection do
+      get 'compareables'
     end
+  end
 
   # Example resource route with options:
   #   resources :products do

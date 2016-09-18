@@ -61,24 +61,24 @@ class SaleListing < ActiveRecord::Base
   reverse_geocoded_by :latitude, :longitude
   # after_validation :reverse_geocode  # auto-fetch address
 
-  enum status: [ :active, :sold, :unknown, :not_found ]
-  enum basement_type: [ :finished, :apartment, :unfinished, :crawl_space, :no_basement]
-  enum home_type: [ :detached, :semi_detached, :condominum, :other ]
+  enum status: [:active, :sold, :unknown, :not_found]
+  enum basement_type: [:finished, :apartment, :unfinished, :crawl_space, :no_basement]
+  enum home_type: [:detached, :semi_detached, :condominum, :other]
 
-  scope :where_near_by, -> (latitude, longitude) {
-    near([latitude, longitude], 50, :order => :distance)
+  scope :where_near_by, -> (latitude, longitude, dist=50) {
+    near([latitude, longitude], dist, :units => :km, :order => :distance)
   }
 
   # before_save :calculate_expected_return_rate
 
-# results = Geocoder.search("#328 - 60 FAIRFAX CRES,Toronto, Ontario M1L1Z8")
-# Client.where("first_name LIKE '%#{params[:first_name]}%'")
-# RentListing.group(:asking_price).count
+  # results = Geocoder.search("#328 - 60 FAIRFAX CRES,Toronto, Ontario M1L1Z8")
+  # Client.where("first_name LIKE '%#{params[:first_name]}%'")
+  # RentListing.group(:asking_price).count
 
   def calculate_expected_return_rate
     rented_avarage = RentListing.near(coordinate, 1, units: :km)
-                      .where(bedrooms: self.bedrooms)
-                      .average(:asking_price)
+                         .where(bedrooms: self.bedrooms)
+                         .average(:asking_price)
 
     if rented_avarage.present?
       self.expected_return_rate = ((rented_avarage * 12) / asking_price) * 100
