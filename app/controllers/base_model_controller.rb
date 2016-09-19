@@ -33,7 +33,7 @@ class BaseModelController < ApplicationController
 
   # get list
   def index
-    @objects = model.all
+    @objects ||= model.all
     apply_filters
     instance_variable_set("@#{modal_name_plural}", @objects)
     create_response(true)
@@ -41,7 +41,7 @@ class BaseModelController < ApplicationController
 
   # get detail
   def show
-    @objects = model.where(id: params[:id])
+    @objects ||= model.where(id: params[:id])
     instance_variable_set("@#{modal_name_singular}", @objects.first)
     create_response
   end

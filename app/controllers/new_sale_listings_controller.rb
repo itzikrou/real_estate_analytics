@@ -11,4 +11,11 @@ class NewSaleListingsController < BaseModelController
              :lot_width, :apx_age, :ammenities, :pool, :water, :sewer, :exterior,
              :ammenities_near_by, :cross_streets, :remarks, :extras, :raw_data,
              :created_at, :updated_at]
+
+  def index
+    if params[:lat] && params[:lng]
+      @objects = model.all.where_near_by(params[:lat], params[:lng], dist=params[:dist] || 10)
+    end
+    super
+  end
 end

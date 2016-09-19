@@ -66,7 +66,7 @@ class SaleListing < ActiveRecord::Base
   enum home_type: [:detached, :semi_detached, :condominum, :other]
 
   scope :where_near_by, -> (latitude, longitude, dist=50) {
-    near([latitude, longitude], dist, :units => :km, :order => :distance)
+    near([latitude, longitude], dist, :units => :km)
   }
 
   # before_save :calculate_expected_return_rate
