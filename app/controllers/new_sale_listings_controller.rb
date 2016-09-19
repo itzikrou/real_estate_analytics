@@ -13,9 +13,18 @@ class NewSaleListingsController < BaseModelController
              :created_at, :updated_at]
 
   def index
+    @objects = model.all
     if params[:lat] && params[:lng]
-      @objects = model.all.where_near_by(params[:lat], params[:lng], dist=params[:dist] || 10)
+      dist = params[:dist].present? ? Integer(params[:dist]) : 2
+      @objects = @objects.where_near_by(params[:lat], params[:lng], dist=dist)
     end
+    if params[:price_from]
+      @objects = @objects.where 'asking_price >= ?', params[:price_from]
+    end
+    if params[:price_to]
+      @objects = @objects.where 'asking_price <= ?', params[:price_to]
+    end
+
     super
   end
 end

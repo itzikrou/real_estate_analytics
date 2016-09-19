@@ -134,7 +134,7 @@ class BaseModelController < ApplicationController
     response[modal_name_plural] = @objects
     response[:meta][:page] = page
     response[:meta][:count] = count
-    response[:meta][:total] = apply_filters(model.all).count # TODO: this could be cached
+    response[:meta][:total] = apply_filters(@objects).count # TODO: this could be cached
     render json: response.to_json(include: include_relations)
   end
 
